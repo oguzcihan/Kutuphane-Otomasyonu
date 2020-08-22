@@ -25,5 +25,17 @@ namespace Kutuphane_Otomasyonu2020
         {
 
         }
+
+        private void kitapKayıtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form kitap = new kitapKayit();
+            kitap.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form kitap = new kitapKayit();
+            kitap.ShowDialog();
+        }
     }
 }
