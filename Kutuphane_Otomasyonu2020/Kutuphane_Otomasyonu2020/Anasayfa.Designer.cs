@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anasayfa));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dosyalarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.lbltarihsaat = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +74,7 @@
             this.toolStripSeparator2,
             this.ayarlarToolStripMenuItem,
             this.yardımToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(950, 30);
             this.menuStrip1.TabIndex = 0;
@@ -107,14 +113,14 @@
             // kitapKayıtToolStripMenuItem
             // 
             this.kitapKayıtToolStripMenuItem.Name = "kitapKayıtToolStripMenuItem";
-            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kitapKayıtToolStripMenuItem.Text = "Kitap Kayıt";
             this.kitapKayıtToolStripMenuItem.Click += new System.EventHandler(this.kitapKayıtToolStripMenuItem_Click);
             // 
             // kitapListesiToolStripMenuItem
             // 
             this.kitapListesiToolStripMenuItem.Name = "kitapListesiToolStripMenuItem";
-            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kitapListesiToolStripMenuItem.Text = "Kitap Listesi";
             // 
             // toolStripSeparator1
@@ -202,7 +208,7 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 41);
+            this.button2.Location = new System.Drawing.Point(12, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 57);
             this.button2.TabIndex = 174;
@@ -216,7 +222,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(163, 41);
+            this.button1.Location = new System.Drawing.Point(168, 74);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 57);
             this.button1.TabIndex = 175;
@@ -231,7 +237,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(473, 41);
+            this.button4.Location = new System.Drawing.Point(476, 73);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(143, 57);
             this.button4.TabIndex = 177;
@@ -245,7 +251,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(328, 42);
+            this.button5.Location = new System.Drawing.Point(330, 74);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(122, 56);
             this.button5.TabIndex = 178;
@@ -253,17 +259,69 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(950, 24);
+            this.menuStrip2.TabIndex = 179;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // lbltarihsaat
+            // 
+            this.lbltarihsaat.AutoSize = true;
+            this.lbltarihsaat.BackColor = System.Drawing.SystemColors.Control;
+            this.lbltarihsaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbltarihsaat.Location = new System.Drawing.Point(13, 5);
+            this.lbltarihsaat.Name = "lbltarihsaat";
+            this.lbltarihsaat.Size = new System.Drawing.Size(12, 17);
+            this.lbltarihsaat.TabIndex = 180;
+            this.lbltarihsaat.Text = ".";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(212, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.TabIndex = 181;
+            this.label2.Text = "Kullanıcı Adı:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(306, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 15);
+            this.label3.TabIndex = 182;
+            this.label3.Text = "kadi";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(950, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbltarihsaat);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
+            this.MainMenuStrip = this.menuStrip2;
             this.Name = "Anasayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
@@ -272,6 +330,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -300,6 +359,11 @@
         private System.Windows.Forms.ToolStripMenuItem üyeListesiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yedekleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem çıkışToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip2;
+        private System.Windows.Forms.Label lbltarihsaat;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

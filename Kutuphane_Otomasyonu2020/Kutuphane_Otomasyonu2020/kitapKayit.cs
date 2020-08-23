@@ -20,10 +20,117 @@ namespace Kutuphane_Otomasyonu2020
             baglanti = new SqlConnection(con.adres);
             InitializeComponent();
         }
-
+        SqlDataAdapter da;
+        DataTable dt = new DataTable();
         private void kitapKayit_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            DateTime mydate = System.DateTime.Now;
+            string year = mydate.Year.ToString();
+            for (int i = 1990; i <= mydate.Year; i++)
+            {
+                cmbBaski.Items.Add(i);
+            }
 
+            random();
+            listele();
+            cmbBaski.SelectedIndex = 0;
+            dataGridView1.Columns[0].HeaderText = "Kitap No";
+            dataGridView1.Columns[1].HeaderText = "Kitap Adı";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].HeaderText = "Baskı Yılı";
+            dataGridView1.Columns[4].HeaderText = "Sayfa Sayısı";
+            dataGridView1.Columns[5].HeaderText = "Yayın Evi";
+            dataGridView1.Columns[6].HeaderText = "Notlar";
+            dataGridView1.Columns[6].Width = 300;
+
+        }
+        public void random()
+        {
+            Random rnd = new Random();
+            int sayi = rnd.Next(1, 1234567);
+            lblkitapNo.Text = sayi.ToString();
+        }
+
+        public void insert()
+        {
+            if (txtkitapAdi.Text == "" || txtYazar.Text == "" || txtsayfaSayisi.Text == "")
+            {
+                MessageBox.Show("Alanların dolu olduğundan emin olunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (cmbBaski.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else
+            {
+                try
+                {
+                    DialogResult d;
+                    d = MessageBox.Show("Kaydetmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+                        baglanti.Open();
+                        string sorgu = "insert into Kitaplar (kitapId,kitapAdi,yazar,baskiYili,sayfaSayisi,yayınEvi,notlar) values (@no,@ad,@yazar,@baski,@sayfa,@yayin,@not)";
+                        SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                        komut.Parameters.AddWithValue("@no", lblkitapNo.Text);
+                        komut.Parameters.AddWithValue("@ad", txtkitapAdi.Text);
+                        komut.Parameters.AddWithValue("@yazar", txtYazar.Text);
+                        komut.Parameters.AddWithValue("@baski", cmbBaski.Text);
+                        komut.Parameters.AddWithValue("@sayfa", txtsayfaSayisi.Text);
+                        komut.Parameters.AddWithValue("@yayin", txtYayinevi.Text);
+                        komut.Parameters.AddWithValue("@not", txtNot.Text);
+                        komut.ExecuteNonQuery();
+
+                        MessageBox.Show("Kayıt Başarılı", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        komut.Dispose();
+                        listele();
+                        temizle();
+                        baglanti.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+        public void listele()
+        {
+            if (baglanti.State == ConnectionState.Open)
+                baglanti.Close();
+            dt.Clear();
+            try
+            {
+                baglanti.Open();
+                string sorgu = "select*from Kitaplar";
+                SqlCommand komut2 = new SqlCommand(sorgu, baglanti);
+                da = new SqlDataAdapter(komut2);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                baglanti.Close();
+                komut2.Dispose();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+        }
+
+        private void btnkaydet_Click(object sender, EventArgs e)
+        {
+            insert();
+
+
+        }
+        public void temizle()
+        {
+            txtkitapAdi.Clear();
+            txtNot.Clear();
+            txtsayfaSayisi.Clear();
+            txtYayinevi.Clear();
+            txtYazar.Clear();
+            random();
+            cmbBaski.SelectedIndex = 0;
+        }
+
+        private void txtsayfaSayisi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

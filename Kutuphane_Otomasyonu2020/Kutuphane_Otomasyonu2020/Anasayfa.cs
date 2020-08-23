@@ -37,5 +37,10 @@ namespace Kutuphane_Otomasyonu2020
             Form kitap = new kitapKayit();
             kitap.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbltarihsaat.Text= DateTime.Now.ToString();
+        }
     }
 }
