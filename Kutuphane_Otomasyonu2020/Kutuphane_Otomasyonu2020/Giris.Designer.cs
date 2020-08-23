@@ -88,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Giris";
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
