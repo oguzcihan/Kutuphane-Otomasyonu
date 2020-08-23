@@ -30,10 +30,10 @@ namespace Kutuphane_Otomasyonu2020
             public string Dogumyili;
             public abstract void eklendi();
 
-            
+
         }
 
-        class admin:ozellıkler
+        class admin : ozellıkler
         {
             public override void eklendi()
             {
@@ -42,14 +42,14 @@ namespace Kutuphane_Otomasyonu2020
             public Boolean yetki = true;
         }
 
-        
-            public void ekle()
-            {
+
+        public void ekle()
+        {
             admin ali = new admin();
             ali.personelAd = textBox1.Text;
-            }
+        }
 
-        class  personel:ozellıkler
+        class personel : ozellıkler
         {
             public Boolean yetki = false;
 
@@ -58,6 +58,10 @@ namespace Kutuphane_Otomasyonu2020
                 throw new NotImplementedException();
             }
         }
-        
+
+        private void PersonelKayıt_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

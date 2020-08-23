@@ -41,6 +41,15 @@ namespace Kutuphane_Otomasyonu2020
             btnKaydet.Text = "KAYDET";
             btnDuzenle.Text = "DUZENLE";
             btnSil.Text = "SIL";
+
+            /*
+            dataGridView1.Columns[0].HeaderText = "Kitap No";
+            dataGridView1.Columns[1].HeaderText = "Kitap Adı";
+            dataGridView1.Columns[2].HeaderText = "Yazar";
+            dataGridView1.Columns[3].HeaderText = "Baskı Yılı";
+            dataGridView1.Columns[4].HeaderText = "Sayfa Sayısı";
+            dataGridView1.Columns[5].HeaderText = "Yayın Evi";
+            dataGridView1.Columns[6].HeaderText = "Notlar";*/
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)

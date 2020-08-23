@@ -228,6 +228,7 @@
             this.Controls.Add(this.button1);
             this.Name = "PersonelKayıt";
             this.Text = "PersonelKayıt";
+            this.Load += new System.EventHandler(this.PersonelKayıt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

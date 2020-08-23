@@ -12,3 +12,5 @@ D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\De
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Giris.resources
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapListesi.resources
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.PersonelKayıt.resources
+D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetForm.resources
+D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetSil.resources
