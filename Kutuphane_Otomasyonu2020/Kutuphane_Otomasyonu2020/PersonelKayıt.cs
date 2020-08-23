@@ -22,21 +22,22 @@ namespace Kutuphane_Otomasyonu2020
 
         }
 
-        public abstract class personel
+        public abstract class ozellıkler
         {
             public int personelno;
             public string personelAd;
             public string personelSoyad;
             public string Dogumyili;
-            public abstract void gorevi();
+            public abstract void eklendi();
 
             
         }
-        class admin:personel
+
+        class admin:ozellıkler
         {
-            public override void gorevi()
+            public override void eklendi()
             {
-                throw new NotImplementedException();
+                MessageBox.Show("Admin eklendi");
             }
             public Boolean yetki = true;
         }
@@ -47,6 +48,16 @@ namespace Kutuphane_Otomasyonu2020
             admin ali = new admin();
             ali.personelAd = textBox1.Text;
             }
+
+        class  personel:ozellıkler
+        {
+            public Boolean yetki = false;
+
+            public override void eklendi()
+            {
+                throw new NotImplementedException();
+            }
+        }
         
     }
 }
