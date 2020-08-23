@@ -53,6 +53,20 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Emanet.cs" />
+    <Compile Include="emanetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emanetForm.designer.cs">
+      <DependentUpon>emanetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emanetSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emanetSil.designer.cs">
+      <DependentUpon>emanetSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmanetSilClass.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +95,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emanetForm.resx">
+      <DependentUpon>emanetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emanetSil.resx">
+      <DependentUpon>emanetSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
