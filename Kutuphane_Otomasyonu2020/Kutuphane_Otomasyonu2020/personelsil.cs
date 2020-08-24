@@ -42,7 +42,7 @@ namespace Kutuphane_Otomasyonu2020
                     ole.ExecuteNonQuery();
                     ole.Dispose();
                     baglanti.Close();
-
+                    
                 }
 
             }

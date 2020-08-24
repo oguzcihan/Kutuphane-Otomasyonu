@@ -57,7 +57,10 @@ namespace Kutuphane_Otomasyonu2020
                         ekle.PersonelKayıt(Convert.ToInt32 (textBox1.Text),textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,comboBox2.Text);
 
                         MessageBox.Show("Kayıt Başarılı", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       
+                        personelsil silTablo = new personelsil();
+                        silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel", "Personel");
+
+
                     }
                 }
                 catch (Exception ex)
@@ -75,17 +78,15 @@ namespace Kutuphane_Otomasyonu2020
 
         private void PersonelKayıt_Load(object sender, EventArgs e)
         {
-            /*
+           
             personelsil silTablo = new personelsil();
             silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel","Personel");
 
-<<<<<<< HEAD
+
             random();
 
 
-=======
-            random();*/
->>>>>>> 59606e30bb119b97ce3b53526a7eb05d5a19c189
+        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -100,8 +101,11 @@ namespace Kutuphane_Otomasyonu2020
                 sil.delete(no);
 
             }
-            
-            
+
+            personelsil silTablo = new personelsil();
+            silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel", "Personel");
+
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
