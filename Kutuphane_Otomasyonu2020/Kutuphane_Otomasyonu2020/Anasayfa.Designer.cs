@@ -61,10 +61,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
-=======
+
             this.kitapSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> 54591a8556c972c4aeb08ae714366fa78ac2265f
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -338,15 +336,14 @@
             this.label3.TabIndex = 182;
             this.label3.Text = "kadi";
             // 
-<<<<<<< HEAD
-=======
+
             // kitapSilToolStripMenuItem
             // 
             this.kitapSilToolStripMenuItem.Name = "kitapSilToolStripMenuItem";
             this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kitapSilToolStripMenuItem.Text = "Kitap Sil";
             // 
->>>>>>> 54591a8556c972c4aeb08ae714366fa78ac2265f
+
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -14,14 +14,7 @@ namespace Kutuphane_Otomasyonu2020
         public SqlConnection baglanti;
         public Connect con = new Connect();
        
-        public void veritabaniac()
-        {
-            baglanti.Open();
-        }
-        public void veritabanikapa()
-        {
-            baglanti.Close();
-        }
+       
         public void DataGridDoldur(DataGridView dataGrid, string sorgu, string tabload)
         {
             baglanti = new SqlConnection(con.adres);
@@ -32,39 +25,30 @@ namespace Kutuphane_Otomasyonu2020
             sda.Fill(dt);
             dataGrid.DataSource = dt.DefaultView;
         }
-      
-        public int idbul(string sorgu, Dictionary<string, string> input)
-        {
-            var cmd = new SqlCommand
-            {
-                CommandText = sorgu
-            };
-            foreach (var i in input)
-            {
-                cmd.Parameters.AddWithValue(i.Key, i.Value);
-            }
-            cmd.Connection = baglanti;
 
-            if (int.TryParse(cmd.ExecuteScalar().ToString(), out int ret))
-            {
-                return ret;
-            }
-            else
-                return 0;
-        }
-        public void delete(string sorgu, Dictionary<string, string> input)
+        public void delete(int no)
         {
-            var cmd = new SqlCommand
+            try
             {
-                CommandText = sorgu
-            };
-            foreach (var i in input)
-            {
-                cmd.Parameters.AddWithValue(i.Key, i.Value);
-            }
-            cmd.Connection = baglanti;
 
-            cmd.ExecuteNonQuery();
+                DialogResult d;
+                d = MessageBox.Show("Silmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (d == DialogResult.Yes)
+                {
+                    baglanti = new SqlConnection(con.adres);
+                    baglanti.Open();
+                    SqlCommand ole = new SqlCommand("delete from Personel where perNo=@no", baglanti);
+                    ole.Parameters.AddWithValue("@no", no);
+                    ole.ExecuteNonQuery();
+                    ole.Dispose();
+                    baglanti.Close();
+
+                }
+
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
+
+
     }
 }

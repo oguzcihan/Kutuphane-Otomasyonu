@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,16 @@ namespace Kutuphane_Otomasyonu2020
 {
     public partial class PersonelKayıt : Form
     {
+        Connect con = new Connect();
+        SqlConnection baglanti;
+        SqlDataAdapter da;
+        DataTable dt = new DataTable();
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            //arama butonu
+            
+        }
+
         public PersonelKayıt()
         {
             InitializeComponent();
@@ -68,10 +79,29 @@ namespace Kutuphane_Otomasyonu2020
             silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel","Personel");
 
             random();
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
+
         {
+
+            foreach (DataGridViewRow drow in dataGridView1.SelectedRows)  //Seçili Satırları Silme
+            {
+                int no = Convert.ToInt32(drow.Cells[0].Value);
+
+                personelsil sil = new personelsil();
+                sil.delete(no);
+
+            }
+            
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
            
         }
     }
