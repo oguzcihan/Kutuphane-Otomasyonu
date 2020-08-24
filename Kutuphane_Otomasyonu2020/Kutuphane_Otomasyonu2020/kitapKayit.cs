@@ -24,6 +24,13 @@ namespace Kutuphane_Otomasyonu2020
         DataTable dt = new DataTable();
         private void kitapKayit_Load(object sender, EventArgs e)
         {
+
+            ToolTip Aciklama = new ToolTip();
+            Aciklama.ToolTipTitle = "Temizle";
+            Aciklama.ToolTipIcon = ToolTipIcon.Info;
+            Aciklama.IsBalloon = true;
+            Aciklama.SetToolTip(btnyenikayit, "Yeni Kayıt");
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             DateTime mydate = System.DateTime.Now;
             string year = mydate.Year.ToString();
@@ -138,6 +145,76 @@ namespace Kutuphane_Otomasyonu2020
         {
             Form sil = new KitapSil();
             sil.ShowDialog();
+        }
+
+        public void update()
+        {
+            if (txtkitapAdi.Text == "" || txtYazar.Text == "" || txtsayfaSayisi.Text == "")
+            {
+                MessageBox.Show("Alanların dolu olduğundan emin olunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (cmbBaski.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else
+            {
+                try
+                {
+                    DialogResult d;
+                    d = MessageBox.Show(lblkitapNo + "No'lu kitabı düzenlemek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+                        baglanti.Open();
+                        string sorgu = "update Kitaplar set kitapAdi=@ad,yazar=@yazar,baskiYili=@baski,sayfaSayisi=@sayfa,yayınEvi=@yayin,notlar=@not where kitapId=@no";
+                        SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                        komut.Parameters.AddWithValue("@no", lblkitapNo.Text);
+                        komut.Parameters.AddWithValue("@ad", txtkitapAdi.Text);
+                        komut.Parameters.AddWithValue("@yazar", txtYazar.Text);
+                        komut.Parameters.AddWithValue("@baski", cmbBaski.Text);
+                        komut.Parameters.AddWithValue("@sayfa", txtsayfaSayisi.Text);
+                        komut.Parameters.AddWithValue("@yayin", txtYayinevi.Text);
+                        komut.Parameters.AddWithValue("@not", txtNot.Text);
+                        komut.ExecuteNonQuery();
+
+                        MessageBox.Show(lblkitapNo+"No'lu kitabı düzenleme başarılı..", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        komut.Dispose();
+                        listele();
+                        temizle();
+                        baglanti.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+
+                lblkitapNo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtkitapAdi.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtYazar.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                cmbBaski.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtsayfaSayisi.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                txtYayinevi.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                txtNot.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+              
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+        }
+
+        private void btnduzenle_Click(object sender, EventArgs e)
+        {
+            update();
+        }
+
+        private void btnyenikayit_Click(object sender, EventArgs e)
+        {
+            temizle();
+            random();
         }
     }
 }
