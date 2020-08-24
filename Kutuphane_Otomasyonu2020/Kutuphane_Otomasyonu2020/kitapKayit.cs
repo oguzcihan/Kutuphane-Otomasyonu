@@ -69,36 +69,14 @@ namespace Kutuphane_Otomasyonu2020
             else if (cmbBaski.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
             else
             {
-                try
-                {
-                    DialogResult d;
-                    d = MessageBox.Show("Kaydetmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (d == DialogResult.Yes)
-                    {
-                        baglanti.Open();
-                        string sorgu = "insert into Kitaplar (kitapId,kitapAdi,yazar,baskiYili,sayfaSayisi,yayınEvi,notlar) values (@no,@ad,@yazar,@baski,@sayfa,@yayin,@not)";
-                        SqlCommand komut = new SqlCommand(sorgu, baglanti);
-                        komut.Parameters.AddWithValue("@no", lblkitapNo.Text);
-                        komut.Parameters.AddWithValue("@ad", txtkitapAdi.Text);
-                        komut.Parameters.AddWithValue("@yazar", txtYazar.Text);
-                        komut.Parameters.AddWithValue("@baski", cmbBaski.Text);
-                        komut.Parameters.AddWithValue("@sayfa", txtsayfaSayisi.Text);
-                        komut.Parameters.AddWithValue("@yayin", txtYayinevi.Text);
-                        komut.Parameters.AddWithValue("@not", txtNot.Text);
-                        komut.ExecuteNonQuery();
+                KitapEkle ekle = new KitapEkle();
+                ekle.insert(Convert.ToInt32(lblkitapNo.Text), txtkitapAdi.Text, txtYazar.Text, Convert.ToInt32(cmbBaski.Text), Convert.ToInt32(txtsayfaSayisi.Text), txtYayinevi.Text, txtNot.Text);
+                listele();
+                temizle();
 
-                        MessageBox.Show("Kayıt Başarılı", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        komut.Dispose();
-                        listele();
-                        temizle();
-                        baglanti.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
             }
+
+
         }
         public void listele()
         {
@@ -174,7 +152,7 @@ namespace Kutuphane_Otomasyonu2020
                         komut.Parameters.AddWithValue("@not", txtNot.Text);
                         komut.ExecuteNonQuery();
 
-                        MessageBox.Show(lblkitapNo+"No'lu kitabı düzenleme başarılı..", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(lblkitapNo + "No'lu kitabı düzenleme başarılı..", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         komut.Dispose();
                         listele();
                         temizle();
@@ -201,7 +179,7 @@ namespace Kutuphane_Otomasyonu2020
                 txtsayfaSayisi.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 txtYayinevi.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
                 txtNot.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-              
+
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
         }

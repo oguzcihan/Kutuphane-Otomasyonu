@@ -47,13 +47,8 @@ namespace Kutuphane_Otomasyonu2020
                 d = MessageBox.Show("Silmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (d == DialogResult.Yes)
                 {
-                    baglanti.Open();
-                    SqlCommand ole = new SqlCommand("delete from Kitaplar where kitapId=@no", baglanti);
-                    ole.Parameters.AddWithValue("@no", no);
-                    ole.ExecuteNonQuery();
-                    ole.Dispose();
-                    baglanti.Close();
-                   
+                    KitapSilClass sil = new KitapSilClass();
+                    sil.delete(no);   
                 }
 
             }

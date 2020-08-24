@@ -14,7 +14,7 @@ namespace Kutuphane_Otomasyonu2020
 
 
 
-        public void PersonelKayıt(int no, string ad, string soyad, string kullaniciadi, string sifre, string eposta,string gorevi)
+        public void PersonelKayıt(int no, string ad, string soyad, string kullaniciadi, string sifre, string eposta, string gorevi)
         {
             baglanti = new SqlConnection(con.adres);
 
