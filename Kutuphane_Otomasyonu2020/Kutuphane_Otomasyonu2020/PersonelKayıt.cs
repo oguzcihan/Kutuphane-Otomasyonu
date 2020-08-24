@@ -75,12 +75,17 @@ namespace Kutuphane_Otomasyonu2020
 
         private void PersonelKayıt_Load(object sender, EventArgs e)
         {
+            /*
             personelsil silTablo = new personelsil();
             silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel","Personel");
 
+<<<<<<< HEAD
             random();
 
 
+=======
+            random();*/
+>>>>>>> 59606e30bb119b97ce3b53526a7eb05d5a19c189
         }
 
         private void button3_Click(object sender, EventArgs e)

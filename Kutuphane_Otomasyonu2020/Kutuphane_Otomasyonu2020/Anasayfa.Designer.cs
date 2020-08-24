@@ -63,6 +63,10 @@
             this.label3 = new System.Windows.Forms.Label();
 
             this.kitapSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 59606e30bb119b97ce3b53526a7eb05d5a19c189
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 

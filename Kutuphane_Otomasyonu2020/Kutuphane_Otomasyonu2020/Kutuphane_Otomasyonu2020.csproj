@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,6 +77,7 @@
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
     <Compile Include="Isimler.cs" />
+    <Compile Include="KitapEkle.cs" />
     <Compile Include="kitapKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +96,7 @@
     <Compile Include="KitapSil.Designer.cs">
       <DependentUpon>KitapSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitapSilClass.cs" />
     <Compile Include="personelekle.cs" />
     <Compile Include="PersonelKayıt.cs">
       <SubType>Form</SubType>
