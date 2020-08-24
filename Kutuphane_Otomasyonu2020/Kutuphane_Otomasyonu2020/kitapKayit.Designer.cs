@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kitapKayit));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnkaydet = new System.Windows.Forms.Button();
             this.Butonlar = new System.Windows.Forms.GroupBox();
@@ -51,6 +52,7 @@
             this.txtYayinevi = new System.Windows.Forms.TextBox();
             this.lblkitapNo = new System.Windows.Forms.Label();
             this.İşlemler = new System.Windows.Forms.GroupBox();
+            this.btnyenikayit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Butonlar.SuspendLayout();
             this.İşlemler.SuspendLayout();
@@ -68,6 +70,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(564, 558);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnkaydet
             // 
@@ -106,6 +109,7 @@
             this.btnduzenle.TabIndex = 16;
             this.btnduzenle.Text = "Düzenle";
             this.btnduzenle.UseVisualStyleBackColor = true;
+            this.btnduzenle.Click += new System.EventHandler(this.btnduzenle_Click);
             // 
             // btnsil
             // 
@@ -150,6 +154,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(146, 23);
             this.textBox7.TabIndex = 20;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txtkitapAdi
             // 
@@ -288,6 +293,7 @@
             // İşlemler
             // 
             this.İşlemler.BackColor = System.Drawing.SystemColors.Control;
+            this.İşlemler.Controls.Add(this.btnyenikayit);
             this.İşlemler.Controls.Add(this.lblkitapNo);
             this.İşlemler.Controls.Add(this.txtYayinevi);
             this.İşlemler.Controls.Add(this.kitap);
@@ -309,6 +315,19 @@
             this.İşlemler.TabIndex = 18;
             this.İşlemler.TabStop = false;
             this.İşlemler.Text = "İşlemler";
+            // 
+            // btnyenikayit
+            // 
+            this.btnyenikayit.BackColor = System.Drawing.Color.Transparent;
+            this.btnyenikayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnyenikayit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnyenikayit.Image = ((System.Drawing.Image)(resources.GetObject("btnyenikayit.Image")));
+            this.btnyenikayit.Location = new System.Drawing.Point(453, 22);
+            this.btnyenikayit.Name = "btnyenikayit";
+            this.btnyenikayit.Size = new System.Drawing.Size(56, 38);
+            this.btnyenikayit.TabIndex = 166;
+            this.btnyenikayit.UseVisualStyleBackColor = false;
+            this.btnyenikayit.Click += new System.EventHandler(this.btnyenikayit_Click);
             // 
             // kitapKayit
             // 
@@ -359,5 +378,6 @@
         private System.Windows.Forms.TextBox txtYayinevi;
         private System.Windows.Forms.Label lblkitapNo;
         private System.Windows.Forms.GroupBox İşlemler;
+        private System.Windows.Forms.Button btnyenikayit;
     }
 }

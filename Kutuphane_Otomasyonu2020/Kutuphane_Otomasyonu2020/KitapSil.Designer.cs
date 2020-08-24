@@ -54,7 +54,7 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(260, 38);
+            this.label14.Location = new System.Drawing.Point(291, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(218, 13);
             this.label14.TabIndex = 164;
@@ -79,8 +79,9 @@
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox7.Location = new System.Drawing.Point(327, 12);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(123, 23);
+            this.textBox7.Size = new System.Drawing.Size(137, 23);
             this.textBox7.TabIndex = 162;
+            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // btnsil
             // 
@@ -98,12 +99,12 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tümünüSeçToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(141, 26);
             // 
             // tümünüSeçToolStripMenuItem
             // 
             this.tümünüSeçToolStripMenuItem.Name = "tümünüSeçToolStripMenuItem";
-            this.tümünüSeçToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tümünüSeçToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.tümünüSeçToolStripMenuItem.Text = "Tümünü Seç";
             this.tümünüSeçToolStripMenuItem.Click += new System.EventHandler(this.tümünüSeçToolStripMenuItem_Click);
             // 

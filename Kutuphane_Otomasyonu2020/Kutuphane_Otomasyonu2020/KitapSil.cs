@@ -93,5 +93,20 @@ namespace Kutuphane_Otomasyonu2020
         {
             dataGridView1.SelectAll();
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+            //arama butonu
+            try
+            {
+                baglanti.Open();
+                dt.Clear();
+                SqlDataAdapter adap = new SqlDataAdapter("select*from Kitaplar where kitapAdi like'" + textBox7.Text + "%'", baglanti);
+                adap.Fill(dt);
+                dataGridView1.DataSource = dt;
+                baglanti.Close();
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+        }
     }
 }
