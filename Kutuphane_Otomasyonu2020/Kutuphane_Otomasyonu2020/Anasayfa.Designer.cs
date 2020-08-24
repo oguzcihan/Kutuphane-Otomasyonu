@@ -58,6 +58,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ödünçKitapServisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ödüçKitapVerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tarihiGeçenKitaplarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +70,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dosyalarToolStripMenuItem,
+            this.ödünçKitapServisiToolStripMenuItem,
             this.kitaplarToolStripMenuItem,
             this.toolStripSeparator1,
             this.personelİşlemleriToolStripMenuItem,
@@ -219,7 +223,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(168, 74);
@@ -306,6 +310,27 @@
             this.label3.TabIndex = 182;
             this.label3.Text = "kadi";
             // 
+            // ödünçKitapServisiToolStripMenuItem
+            // 
+            this.ödünçKitapServisiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ödüçKitapVerToolStripMenuItem,
+            this.tarihiGeçenKitaplarToolStripMenuItem});
+            this.ödünçKitapServisiToolStripMenuItem.Name = "ödünçKitapServisiToolStripMenuItem";
+            this.ödünçKitapServisiToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
+            this.ödünçKitapServisiToolStripMenuItem.Text = "Ödünç Kitap Servisi";
+            // 
+            // ödüçKitapVerToolStripMenuItem
+            // 
+            this.ödüçKitapVerToolStripMenuItem.Name = "ödüçKitapVerToolStripMenuItem";
+            this.ödüçKitapVerToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.ödüçKitapVerToolStripMenuItem.Text = "Ödüç Kitap Kayıt";
+            // 
+            // tarihiGeçenKitaplarToolStripMenuItem
+            // 
+            this.tarihiGeçenKitaplarToolStripMenuItem.Name = "tarihiGeçenKitaplarToolStripMenuItem";
+            this.tarihiGeçenKitaplarToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.tarihiGeçenKitaplarToolStripMenuItem.Text = "Tarihi Geçen Kitaplar";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,6 +389,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem ödünçKitapServisiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ödüçKitapVerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tarihiGeçenKitaplarToolStripMenuItem;
     }
 }
 

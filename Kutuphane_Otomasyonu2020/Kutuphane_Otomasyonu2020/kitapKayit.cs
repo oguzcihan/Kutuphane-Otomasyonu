@@ -35,13 +35,14 @@ namespace Kutuphane_Otomasyonu2020
             random();
             listele();
             cmbBaski.SelectedIndex = 0;
-            dataGridView1.Columns[0].HeaderText = "Kitap No";
-            dataGridView1.Columns[1].HeaderText = "Kitap Adı";
-            dataGridView1.Columns[2].HeaderText = "Yazar";
-            dataGridView1.Columns[3].HeaderText = "Baskı Yılı";
-            dataGridView1.Columns[4].HeaderText = "Sayfa Sayısı";
-            dataGridView1.Columns[5].HeaderText = "Yayın Evi";
-            dataGridView1.Columns[6].HeaderText = "Notlar";
+            Isimler name = new Isimler();
+            dataGridView1.Columns[0].HeaderText = name.kitapId;
+            dataGridView1.Columns[1].HeaderText = name.kitapAdi;
+            dataGridView1.Columns[2].HeaderText = name.yazar;
+            dataGridView1.Columns[3].HeaderText = name.baski;
+            dataGridView1.Columns[4].HeaderText = name.sayfa;
+            dataGridView1.Columns[5].HeaderText = name.yayin;
+            dataGridView1.Columns[6].HeaderText = name.not;
             dataGridView1.Columns[6].Width = 300;
 
         }
@@ -131,6 +132,12 @@ namespace Kutuphane_Otomasyonu2020
         private void txtsayfaSayisi_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            Form sil = new KitapSil();
+            sil.ShowDialog();
         }
     }
 }

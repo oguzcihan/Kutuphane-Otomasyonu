@@ -73,6 +73,7 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
+    <Compile Include="Isimler.cs" />
     <Compile Include="kitapKayit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="kitapListesi.Designer.cs">
       <DependentUpon>kitapListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitapSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitapSil.Designer.cs">
+      <DependentUpon>KitapSil.cs</DependentUpon>
     </Compile>
     <Compile Include="PersonelKayıt.cs">
       <SubType>Form</SubType>
@@ -110,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="kitapListesi.resx">
       <DependentUpon>kitapListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitapSil.resx">
+      <DependentUpon>KitapSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelKayıt.resx">
       <DependentUpon>PersonelKayıt.cs</DependentUpon>
