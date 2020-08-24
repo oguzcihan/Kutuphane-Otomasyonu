@@ -1,1 +1,1 @@
-Data Source=DESKTOP-5689QQ3;Initial Catalog=Kutuphane;Integrated Security=True
+Data Source=LENOVO\SQLEXPRESS;Initial Catalog=Kutuphane;Integrated Security=True
