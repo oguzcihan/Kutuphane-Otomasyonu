@@ -16,52 +16,63 @@ namespace Kutuphane_Otomasyonu2020
         {
             InitializeComponent();
         }
+        public void random()
+        {
+            Random rnd = new Random();
+            int sayi = rnd.Next(1, 1234567);
+            textBox1.Text = sayi.ToString();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        public abstract class ozellıkler
-        {
-            public int personelno;
-            public string personelAd;
-            public string personelSoyad;
-            public string Dogumyili;
-            public abstract void eklendi();
-
-
-        }
-
-        class admin : ozellıkler
-        {
-            public override void eklendi()
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text=="")
             {
-                MessageBox.Show("Admin eklendi");
+                MessageBox.Show("Alanların dolu olduğundan emin olunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            public Boolean yetki = true;
-        }
+            else if (comboBox2.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
-
-        public void ekle()
-        {
-            admin ali = new admin();
-            ali.personelAd = textBox1.Text;
-        }
-
-        class personel : ozellıkler
-        {
-            public Boolean yetki = false;
-
-            public override void eklendi()
+            else
             {
-                throw new NotImplementedException();
+                
+
+                try
+                {
+                    DialogResult d;
+                    d = MessageBox.Show("Kaydetmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+                       
+                        personelekle ekle = new personelekle();
+                        ekle.PersonelKayıt(Convert.ToInt32 (textBox1.Text),textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,comboBox2.Text);
+
+                        MessageBox.Show("Kayıt Başarılı", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
         }
+
+
+
+        
+        
+        
 
         private void PersonelKayıt_Load(object sender, EventArgs e)
         {
+            personelsil silTablo = new personelsil();
+            silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel","Personel");
 
+            random();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

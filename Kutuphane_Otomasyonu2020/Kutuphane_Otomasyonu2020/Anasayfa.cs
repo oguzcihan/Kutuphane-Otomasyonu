@@ -42,5 +42,17 @@ namespace Kutuphane_Otomasyonu2020
         {
             lbltarihsaat.Text= DateTime.Now.ToString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form personel = new PersonelKayıt();
+            personel.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form emanet = new emanetForm();
+            emanet.ShowDialog();
+        }
     }
 }

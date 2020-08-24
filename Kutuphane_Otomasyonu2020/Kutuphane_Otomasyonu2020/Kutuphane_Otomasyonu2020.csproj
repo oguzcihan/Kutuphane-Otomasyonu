@@ -92,12 +92,14 @@
     <Compile Include="KitapSil.Designer.cs">
       <DependentUpon>KitapSil.cs</DependentUpon>
     </Compile>
+    <Compile Include="personelekle.cs" />
     <Compile Include="PersonelKayıt.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PersonelKayıt.Designer.cs">
       <DependentUpon>PersonelKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="personelsil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Anasayfa.resx">

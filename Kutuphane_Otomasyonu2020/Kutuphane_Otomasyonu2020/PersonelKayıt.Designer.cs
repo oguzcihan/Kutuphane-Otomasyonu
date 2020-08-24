@@ -35,7 +35,6 @@
             this.lblkitapAdi = new System.Windows.Forms.Label();
             this.lblbaskiYili = new System.Windows.Forms.Label();
             this.lblyazar = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -45,12 +44,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(44, 303);
+            this.button1.Location = new System.Drawing.Point(48, 337);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 42);
             this.button1.TabIndex = 0;
@@ -60,7 +64,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 303);
+            this.button2.Location = new System.Drawing.Point(162, 337);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 42);
             this.button2.TabIndex = 1;
@@ -69,12 +73,13 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(283, 303);
+            this.button3.Location = new System.Drawing.Point(287, 337);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 42);
             this.button3.TabIndex = 2;
             this.button3.Text = "Sil";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lblkitapNo
             // 
@@ -102,9 +107,9 @@
             this.lblbaskiYili.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblbaskiYili.Location = new System.Drawing.Point(41, 186);
             this.lblbaskiYili.Name = "lblbaskiYili";
-            this.lblbaskiYili.Size = new System.Drawing.Size(79, 17);
+            this.lblbaskiYili.Size = new System.Drawing.Size(80, 17);
             this.lblbaskiYili.TabIndex = 17;
-            this.lblbaskiYili.Text = "Doğum Yılı:";
+            this.lblbaskiYili.Text = "KullanıcıAdı";
             // 
             // lblyazar
             // 
@@ -115,15 +120,6 @@
             this.lblyazar.Size = new System.Drawing.Size(52, 17);
             this.lblyazar.TabIndex = 18;
             this.lblyazar.Text = "Soyad:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 186);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 24);
-            this.comboBox1.TabIndex = 25;
             // 
             // textBox3
             // 
@@ -153,7 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(41, 227);
+            this.label1.Location = new System.Drawing.Point(45, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 17);
             this.label1.TabIndex = 26;
@@ -163,7 +159,11 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 227);
+            this.comboBox2.Items.AddRange(new object[] {
+            "Seçiniz",
+            "Yönetici",
+            "Personel"});
+            this.comboBox2.Location = new System.Drawing.Point(139, 291);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(151, 24);
             this.comboBox2.TabIndex = 27;
@@ -204,11 +204,60 @@
             this.dataGridView1.Size = new System.Drawing.Size(564, 439);
             this.dataGridView1.TabIndex = 162;
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox4.Location = new System.Drawing.Point(135, 183);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(151, 23);
+            this.textBox4.TabIndex = 166;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox5.Location = new System.Drawing.Point(135, 212);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(151, 23);
+            this.textBox5.TabIndex = 168;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(41, 215);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.TabIndex = 167;
+            this.label3.Text = "Sifre";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox6.Location = new System.Drawing.Point(139, 251);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(151, 23);
+            this.textBox6.TabIndex = 170;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(45, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 169;
+            this.label4.Text = "Eposta";
+            // 
             // PersonelKayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 647);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox7);
@@ -219,7 +268,6 @@
             this.Controls.Add(this.lblkitapAdi);
             this.Controls.Add(this.lblbaskiYili);
             this.Controls.Add(this.lblyazar);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox2);
@@ -244,7 +292,6 @@
         private System.Windows.Forms.Label lblkitapAdi;
         private System.Windows.Forms.Label lblbaskiYili;
         private System.Windows.Forms.Label lblyazar;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -254,5 +301,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
     }
 }
