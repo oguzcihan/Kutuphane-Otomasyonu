@@ -40,6 +40,7 @@
             this.kitaplarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kitapKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kitapListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kitapSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.personelİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelKayıtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,16 +55,15 @@
             this.yardımToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnperKayit = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.lbltarihsaat = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-
-            this.kitapSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
+            this.lblkadi = new System.Windows.Forms.Label();
+            this.lblgorev = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +152,12 @@
             this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kitapListesiToolStripMenuItem.Text = "Kitap Listesi";
             // 
+            // kitapSilToolStripMenuItem
+            // 
+            this.kitapSilToolStripMenuItem.Name = "kitapSilToolStripMenuItem";
+            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapSilToolStripMenuItem.Text = "Kitap Sil";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -169,13 +175,13 @@
             // personelKayıtToolStripMenuItem
             // 
             this.personelKayıtToolStripMenuItem.Name = "personelKayıtToolStripMenuItem";
-            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelKayıtToolStripMenuItem.Text = "Personel Kayıt";
             // 
             // personelListesiToolStripMenuItem
             // 
             this.personelListesiToolStripMenuItem.Name = "personelListesiToolStripMenuItem";
-            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelListesiToolStripMenuItem.Text = "Personel Listesi";
             // 
             // üyeİşlemleriToolStripMenuItem
@@ -190,13 +196,13 @@
             // üyeKayıtToolStripMenuItem
             // 
             this.üyeKayıtToolStripMenuItem.Name = "üyeKayıtToolStripMenuItem";
-            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.üyeKayıtToolStripMenuItem.Text = "Üye Kayıt";
             // 
             // üyeListesiToolStripMenuItem
             // 
             this.üyeListesiToolStripMenuItem.Name = "üyeListesiToolStripMenuItem";
-            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.üyeListesiToolStripMenuItem.Text = "Üye Listesi";
             // 
             // toolStripSeparator2
@@ -216,13 +222,13 @@
             // yedekleToolStripMenuItem
             // 
             this.yedekleToolStripMenuItem.Name = "yedekleToolStripMenuItem";
-            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yedekleToolStripMenuItem.Text = "Yedekle";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // yardımToolStripMenuItem
@@ -261,20 +267,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button4
+            // btnperKayit
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(476, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 57);
-            this.button4.TabIndex = 177;
-            this.button4.Text = "Personel Kayıt";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnperKayit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnperKayit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnperKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnperKayit.Image")));
+            this.btnperKayit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnperKayit.Location = new System.Drawing.Point(476, 73);
+            this.btnperKayit.Name = "btnperKayit";
+            this.btnperKayit.Size = new System.Drawing.Size(143, 57);
+            this.btnperKayit.TabIndex = 177;
+            this.btnperKayit.Text = "Personel Kayıt";
+            this.btnperKayit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnperKayit.UseVisualStyleBackColor = false;
+            this.btnperKayit.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -320,42 +326,58 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(212, 5);
+            this.label2.Location = new System.Drawing.Point(172, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 17);
+            this.label2.Size = new System.Drawing.Size(131, 17);
             this.label2.TabIndex = 181;
-            this.label2.Text = "Kullanıcı Adı:";
+            this.label2.Text = "Kullanıcı Adı/Görev:";
             // 
-            // label3
+            // lblkadi
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(306, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
-            this.label3.TabIndex = 182;
-            this.label3.Text = "kadi";
+            this.lblkadi.AutoSize = true;
+            this.lblkadi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblkadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblkadi.Location = new System.Drawing.Point(398, 5);
+            this.lblkadi.Name = "lblkadi";
+            this.lblkadi.Size = new System.Drawing.Size(30, 15);
+            this.lblkadi.TabIndex = 182;
+            this.lblkadi.Text = "kadi";
             // 
-
-            // kitapSilToolStripMenuItem
+            // lblgorev
             // 
-            this.kitapSilToolStripMenuItem.Name = "kitapSilToolStripMenuItem";
-            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kitapSilToolStripMenuItem.Text = "Kitap Sil";
+            this.lblgorev.AutoSize = true;
+            this.lblgorev.BackColor = System.Drawing.SystemColors.Control;
+            this.lblgorev.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblgorev.Location = new System.Drawing.Point(299, 4);
+            this.lblgorev.Name = "lblgorev";
+            this.lblgorev.Size = new System.Drawing.Size(44, 17);
+            this.lblgorev.TabIndex = 183;
+            this.lblgorev.Text = "gorev";
             // 
-
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(377, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(20, 17);
+            this.label1.TabIndex = 184;
+            this.label1.Text = "--";
+            // 
             // Anasayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.ClientSize = new System.Drawing.Size(950, 450);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblgorev);
+            this.Controls.Add(this.lblkadi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbltarihsaat);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnperKayit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.menuStrip1);
@@ -365,6 +387,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anasayfa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Anasayfa_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -388,7 +411,7 @@
         private System.Windows.Forms.ToolStripMenuItem yardımToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnperKayit;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ToolStripMenuItem kitapKayıtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kitapListesiToolStripMenuItem;
@@ -402,11 +425,13 @@
         private System.Windows.Forms.Label lbltarihsaat;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblkadi;
         private System.Windows.Forms.ToolStripMenuItem ödünçKitapServisiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ödüçKitapVerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarihiGeçenKitaplarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kitapSilToolStripMenuItem;
+        private System.Windows.Forms.Label lblgorev;
+        private System.Windows.Forms.Label label1;
     }
 }
 

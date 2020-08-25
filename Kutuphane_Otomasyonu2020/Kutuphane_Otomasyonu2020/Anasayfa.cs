@@ -23,7 +23,18 @@ namespace Kutuphane_Otomasyonu2020
 
         private void Form1_Load(object sender, EventArgs e)
         {
+          
+            
+            lblkadi.Text = Giris.kullaniciAdi;
+            lblgorev.Text = Giris.gorev;
 
+            if (lblgorev.Text == "PERSONEL")
+            {
+                üyeİşlemleriToolStripMenuItem.Visible = false;
+                kitapSilToolStripMenuItem.Visible = false;
+                yedekleToolStripMenuItem.Visible = false;
+                btnperKayit.Visible = false;
+            }
         }
 
         private void kitapKayıtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,6 +64,24 @@ namespace Kutuphane_Otomasyonu2020
         {
             Form emanet = new emanetForm();
             emanet.ShowDialog();
+        }
+
+        private void Anasayfa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                //x tuşu kapatır.
+                DialogResult g = MessageBox.Show("Uygulamayı kapatmak istiyor musunuz ? ", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (g == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+
+                }
+                Environment.Exit(-1);
+
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

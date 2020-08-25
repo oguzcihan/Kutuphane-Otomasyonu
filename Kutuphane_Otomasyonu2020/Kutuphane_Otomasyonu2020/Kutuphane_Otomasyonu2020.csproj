@@ -76,6 +76,7 @@
     <Compile Include="Giris.Designer.cs">
       <DependentUpon>Giris.cs</DependentUpon>
     </Compile>
+    <Compile Include="GirisClass.cs" />
     <Compile Include="Isimler.cs" />
     <Compile Include="KitapEkle.cs" />
     <Compile Include="kitapKayit.cs">
