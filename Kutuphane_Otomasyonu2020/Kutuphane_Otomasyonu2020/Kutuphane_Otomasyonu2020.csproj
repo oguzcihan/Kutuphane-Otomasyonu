@@ -97,6 +97,7 @@
       <DependentUpon>KitapSil.cs</DependentUpon>
     </Compile>
     <Compile Include="KitapSilClass.cs" />
+    <Compile Include="personelara.cs" />
     <Compile Include="personelekle.cs" />
     <Compile Include="PersonelKayıt.cs">
       <SubType>Form</SubType>

@@ -20,7 +20,10 @@ namespace Kutuphane_Otomasyonu2020
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
             //arama butonu
-            
+            personelara ara = new personelara();
+            ara.ara(dataGridView1, "select*from Personel where perAdi like'", textBox7.Text, "Personel");
+
+
         }
 
         public PersonelKayıt()
@@ -36,15 +39,15 @@ namespace Kutuphane_Otomasyonu2020
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text=="")
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "")
             {
                 MessageBox.Show("Alanların dolu olduğundan emin olunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (comboBox2.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else if (comboBox2.SelectedIndex == 0) { MessageBox.Show("Görevi seçiniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
 
             else
             {
-                
+
 
                 try
                 {
@@ -52,14 +55,21 @@ namespace Kutuphane_Otomasyonu2020
                     d = MessageBox.Show("Kaydetmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (d == DialogResult.Yes)
                     {
-                       
+
                         personelekle ekle = new personelekle();
-                        ekle.PersonelKayıt(Convert.ToInt32 (textBox1.Text),textBox2.Text,textBox3.Text,textBox4.Text,textBox5.Text,textBox6.Text,comboBox2.Text);
+                        ekle.PersonelKayıt(Convert.ToInt32(textBox1.Text), textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, comboBox2.Text);
 
                         MessageBox.Show("Kayıt Başarılı", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         personelsil silTablo = new personelsil();
                         silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel", "Personel");
 
+                        random();
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        comboBox2.SelectedIndex = 0;
 
                     }
                 }
@@ -72,21 +82,24 @@ namespace Kutuphane_Otomasyonu2020
 
 
 
-        
-        
-        
+
+
+
 
         private void PersonelKayıt_Load(object sender, EventArgs e)
         {
-           
+
             personelsil silTablo = new personelsil();
-            silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel","Personel");
+            silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel", "Personel");
 
 
             random();
 
+            textBox1.Enabled = false;
+            comboBox2.SelectedIndex = 0;
 
-        
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -110,8 +123,72 @@ namespace Kutuphane_Otomasyonu2020
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-           
+            try
+            {
+
+                textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBox6.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                comboBox2.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "")
+            {
+                MessageBox.Show("Alanların dolu olduğundan emin olunuz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (comboBox2.SelectedIndex == 0) { MessageBox.Show("Geçersiz Baskı Yılı.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+            else
+            {
+                try
+                {
+                    DialogResult d;
+                    d = MessageBox.Show(textBox1.Text + "No'lu personeli düzenlemek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (d == DialogResult.Yes)
+                    {
+                        baglanti = new SqlConnection(con.adres);
+
+                        baglanti.Open();
+                        string sorgu = "update Personel set perAdi=@ad,perSoyad=@soyad,perKullaniciadi=@kullanici,sifre=@sifre,eposta=@eposta,gorevi=@gorevi where perNo=@no";
+                        SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                        komut.Parameters.AddWithValue("@no", textBox1.Text);
+                        komut.Parameters.AddWithValue("@ad", textBox2.Text);
+                        komut.Parameters.AddWithValue("@soyad", textBox3.Text);
+                        komut.Parameters.AddWithValue("@kullanici", textBox4.Text);
+                        komut.Parameters.AddWithValue("@sifre", textBox5.Text);
+                        komut.Parameters.AddWithValue("@eposta", textBox6.Text);
+                        komut.Parameters.AddWithValue("@gorevi", comboBox2.Text);
+                        komut.ExecuteNonQuery();
+
+                        MessageBox.Show(textBox1.Text + "No'lu personel düzenleme başarılı..", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        komut.Dispose();
+
+                        personelsil silTablo = new personelsil();
+                        silTablo.DataGridDoldur(dataGridView1, "SELECT perNo, perAdi, perSoyad, perKullaniciadi, eposta, gorevi FROM Personel", "Personel");
+
+
+                        random();
+                        textBox2.Text = "";
+                        textBox3.Text = "";
+                        textBox4.Text = "";
+                        textBox5.Text = "";
+                        textBox6.Text = "";
+                        comboBox2.SelectedIndex = 0;
+                        baglanti.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
         }
     }
 }
