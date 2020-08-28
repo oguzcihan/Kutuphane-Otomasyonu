@@ -38,8 +38,10 @@
             this.dgvSilTablo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSilTablo.Location = new System.Drawing.Point(12, 12);
             this.dgvSilTablo.Name = "dgvSilTablo";
+            this.dgvSilTablo.ReadOnly = true;
             this.dgvSilTablo.RowHeadersWidth = 51;
             this.dgvSilTablo.RowTemplate.Height = 24;
+            this.dgvSilTablo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSilTablo.Size = new System.Drawing.Size(1125, 564);
             this.dgvSilTablo.TabIndex = 0;
             this.dgvSilTablo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSilTablo_CellContentClick);

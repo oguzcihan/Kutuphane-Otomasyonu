@@ -33,6 +33,7 @@ namespace Kutuphane_Otomasyonu2020
             DataTable dt = new DataTable(tabload);
             sda.Fill(dt);
             dataGrid.DataSource = dt.DefaultView;
+            veritabanikapa();
         }
         public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string tabload,string sutun)
         {
@@ -42,6 +43,7 @@ namespace Kutuphane_Otomasyonu2020
             sda.Fill(dt);
             comboBox.DataSource = dt.DefaultView;
             comboBox.DisplayMember = sutun;
+            veritabanikapa();
         }
         public int idbul(string sorgu, Dictionary<string, string> input)
         {
@@ -54,8 +56,8 @@ namespace Kutuphane_Otomasyonu2020
                 cmd.Parameters.AddWithValue(i.Key, i.Value);
             }
             cmd.Connection = baglanti;
-
-            if (int.TryParse(cmd.ExecuteScalar().ToString(), out int ret))
+            int ret;
+            if (int.TryParse(cmd.ExecuteScalar().ToString(), out ret))
             {
                 return ret;
             }

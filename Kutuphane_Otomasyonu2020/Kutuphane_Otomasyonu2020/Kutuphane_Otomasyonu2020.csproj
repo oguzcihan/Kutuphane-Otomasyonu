@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cbKAd\Text\ToString.cs" />
     <Compile Include="Connect.cs" />
     <Compile Include="Anasayfa.cs">
       <SubType>Form</SubType>
@@ -57,6 +58,8 @@
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="Emanet.cs" />
+    <Compile Include="EmanetDuzenleClass.cs" />
+    <Compile Include="EmanetEkleClass.cs" />
     <Compile Include="emanetForm.cs">
       <SubType>Form</SubType>
     </Compile>
