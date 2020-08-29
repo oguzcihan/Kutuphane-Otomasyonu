@@ -133,6 +133,7 @@ namespace Kutuphane_Otomasyonu2020
             dgvTablo.Columns[5].HeaderText = "Yayın Evi";
             btnKitapSec.Visible = true;
             btnMusteriSec.Visible = false;
+            btnMusteriGetir.Visible = false;
 
         }
 
