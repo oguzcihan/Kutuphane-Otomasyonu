@@ -38,7 +38,8 @@ namespace Kutuphane_Otomasyonu2020
             dgvTablo.Columns[4].HeaderText = "E-Posta";
             dgvTablo.Columns[5].HeaderText = "Adres";
             btnMusteriSec.Visible = true;
-
+            btnKitapSec.Visible = false;
+            btnMusteriGetir.Visible = false;
         }
 
         SqlConnection baglanti;
@@ -84,9 +85,9 @@ namespace Kutuphane_Otomasyonu2020
             uyeId.Visible = false;
             kitapId.Visible = false;
             btnKaydet.Visible = false;
-            btnKitapGetir.Visible = false;
             btnKitapSec.Visible = false;
             btnMusteriSec.Visible = false;
+            btnMusteriGetir.Visible = false;
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -113,6 +114,9 @@ namespace Kutuphane_Otomasyonu2020
             dgvTablo.Columns[7].HeaderText = "Yayınevi";
             dgvTablo.Columns[8].HeaderText = "Emanet Verildiği Tarih";
             dgvTablo.Columns[9].HeaderText = "Geri Alınacağı Tarih";
+            btnMusteriSec.Visible = false;
+            btnKitapGetir.Visible = true;
+            btnKaydet.Visible = false;
         }
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -132,8 +136,8 @@ namespace Kutuphane_Otomasyonu2020
             dgvTablo.Columns[4].HeaderText = "Sayfa Sayısı";
             dgvTablo.Columns[5].HeaderText = "Yayın Evi";
             btnKitapSec.Visible = true;
-            btnMusteriSec.Visible = false;
-            btnMusteriGetir.Visible = false;
+            btnKitapGetir.Visible = false;
+            
 
         }
 
@@ -148,7 +152,9 @@ namespace Kutuphane_Otomasyonu2020
             lblMSad.Text = dgvTablo.CurrentRow.Cells[2].Value.ToString();
             lblMTel.Text = dgvTablo.CurrentRow.Cells[3].Value.ToString();
             lblMPosta.Text = dgvTablo.CurrentRow.Cells[4].Value.ToString();
-            btnKitapGetir.Visible = true;
+            btnKaydet.Visible = true;
+            btnMusteriGetir.Visible = false;
+            btnMusteriSec.Visible = false;
         }
 
         private void btnKitapSec_Click(object sender, EventArgs e)
@@ -160,7 +166,9 @@ namespace Kutuphane_Otomasyonu2020
             lblKAd.Text = dgvTablo.CurrentRow.Cells[1].Value.ToString();
             lblKYazar.Text = dgvTablo.CurrentRow.Cells[2].Value.ToString();
             lblKYEvi.Text = dgvTablo.CurrentRow.Cells[5].Value.ToString();
-            btnKaydet.Visible = true;
+            btnMusteriGetir.Visible = true;
+            btnKitapGetir.Visible = false;
+            btnKitapSec.Visible = false;
         }
     }
 }

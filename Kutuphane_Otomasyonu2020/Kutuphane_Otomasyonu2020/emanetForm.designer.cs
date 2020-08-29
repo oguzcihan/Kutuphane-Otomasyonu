@@ -48,14 +48,18 @@
             this.btnKitapGetir = new System.Windows.Forms.Button();
             this.btnMusteriSec = new System.Windows.Forms.Button();
             this.btnKitapSec = new System.Windows.Forms.Button();
+            this.groupbox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablo)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupbox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMAd
             // 
             this.lblMAd.AutoSize = true;
-            this.lblMAd.Location = new System.Drawing.Point(48, 29);
+            this.lblMAd.Location = new System.Drawing.Point(23, 27);
             this.lblMAd.Name = "lblMAd";
             this.lblMAd.Size = new System.Drawing.Size(46, 17);
             this.lblMAd.TabIndex = 0;
@@ -64,7 +68,7 @@
             // lblMSad
             // 
             this.lblMSad.AutoSize = true;
-            this.lblMSad.Location = new System.Drawing.Point(48, 57);
+            this.lblMSad.Location = new System.Drawing.Point(23, 54);
             this.lblMSad.Name = "lblMSad";
             this.lblMSad.Size = new System.Drawing.Size(46, 17);
             this.lblMSad.TabIndex = 1;
@@ -73,7 +77,7 @@
             // lblMTel
             // 
             this.lblMTel.AutoSize = true;
-            this.lblMTel.Location = new System.Drawing.Point(48, 87);
+            this.lblMTel.Location = new System.Drawing.Point(23, 85);
             this.lblMTel.Name = "lblMTel";
             this.lblMTel.Size = new System.Drawing.Size(46, 17);
             this.lblMTel.TabIndex = 2;
@@ -82,7 +86,7 @@
             // lblMPosta
             // 
             this.lblMPosta.AutoSize = true;
-            this.lblMPosta.Location = new System.Drawing.Point(48, 117);
+            this.lblMPosta.Location = new System.Drawing.Point(23, 115);
             this.lblMPosta.Name = "lblMPosta";
             this.lblMPosta.Size = new System.Drawing.Size(46, 17);
             this.lblMPosta.TabIndex = 3;
@@ -91,7 +95,7 @@
             // lblKAd
             // 
             this.lblKAd.AutoSize = true;
-            this.lblKAd.Location = new System.Drawing.Point(48, 146);
+            this.lblKAd.Location = new System.Drawing.Point(22, 30);
             this.lblKAd.Name = "lblKAd";
             this.lblKAd.Size = new System.Drawing.Size(46, 17);
             this.lblKAd.TabIndex = 5;
@@ -100,7 +104,7 @@
             // lblKYazar
             // 
             this.lblKYazar.AutoSize = true;
-            this.lblKYazar.Location = new System.Drawing.Point(48, 174);
+            this.lblKYazar.Location = new System.Drawing.Point(22, 57);
             this.lblKYazar.Name = "lblKYazar";
             this.lblKYazar.Size = new System.Drawing.Size(46, 17);
             this.lblKYazar.TabIndex = 6;
@@ -109,7 +113,7 @@
             // lblKYEvi
             // 
             this.lblKYEvi.AutoSize = true;
-            this.lblKYEvi.Location = new System.Drawing.Point(48, 202);
+            this.lblKYEvi.Location = new System.Drawing.Point(22, 88);
             this.lblKYEvi.Name = "lblKYEvi";
             this.lblKYEvi.Size = new System.Drawing.Size(46, 17);
             this.lblKYEvi.TabIndex = 7;
@@ -145,7 +149,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(292, 385);
+            this.btnSil.Location = new System.Drawing.Point(160, 385);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(112, 34);
@@ -181,17 +185,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupbox2);
             this.groupBox1.Controls.Add(this.uyeId);
             this.groupBox1.Controls.Add(this.kitapId);
-            this.groupBox1.Controls.Add(this.lblMAd);
-            this.groupBox1.Controls.Add(this.lblMSad);
-            this.groupBox1.Controls.Add(this.lblMTel);
-            this.groupBox1.Controls.Add(this.lblMPosta);
             this.groupBox1.Controls.Add(this.dtpGTarih);
             this.groupBox1.Controls.Add(this.lblGTarih);
-            this.groupBox1.Controls.Add(this.lblKAd);
-            this.groupBox1.Controls.Add(this.lblKYazar);
-            this.groupBox1.Controls.Add(this.lblKYEvi);
             this.groupBox1.Location = new System.Drawing.Point(16, 78);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -221,7 +220,7 @@
             // 
             // btnMusteriGetir
             // 
-            this.btnMusteriGetir.Location = new System.Drawing.Point(39, 439);
+            this.btnMusteriGetir.Location = new System.Drawing.Point(39, 458);
             this.btnMusteriGetir.Name = "btnMusteriGetir";
             this.btnMusteriGetir.Size = new System.Drawing.Size(115, 32);
             this.btnMusteriGetir.TabIndex = 27;
@@ -231,7 +230,7 @@
             // 
             // btnKitapGetir
             // 
-            this.btnKitapGetir.Location = new System.Drawing.Point(289, 439);
+            this.btnKitapGetir.Location = new System.Drawing.Point(39, 458);
             this.btnKitapGetir.Name = "btnKitapGetir";
             this.btnKitapGetir.Size = new System.Drawing.Size(115, 32);
             this.btnKitapGetir.TabIndex = 28;
@@ -241,7 +240,7 @@
             // 
             // btnMusteriSec
             // 
-            this.btnMusteriSec.Location = new System.Drawing.Point(487, 476);
+            this.btnMusteriSec.Location = new System.Drawing.Point(160, 458);
             this.btnMusteriSec.Name = "btnMusteriSec";
             this.btnMusteriSec.Size = new System.Drawing.Size(115, 32);
             this.btnMusteriSec.TabIndex = 29;
@@ -251,13 +250,38 @@
             // 
             // btnKitapSec
             // 
-            this.btnKitapSec.Location = new System.Drawing.Point(608, 476);
+            this.btnKitapSec.Location = new System.Drawing.Point(160, 458);
             this.btnKitapSec.Name = "btnKitapSec";
             this.btnKitapSec.Size = new System.Drawing.Size(115, 32);
             this.btnKitapSec.TabIndex = 30;
             this.btnKitapSec.Text = "button4";
             this.btnKitapSec.UseVisualStyleBackColor = true;
             this.btnKitapSec.Click += new System.EventHandler(this.btnKitapSec_Click);
+            // 
+            // groupbox2
+            // 
+            this.groupbox2.Controls.Add(this.lblKYEvi);
+            this.groupbox2.Controls.Add(this.lblKYazar);
+            this.groupbox2.Controls.Add(this.lblKAd);
+            this.groupbox2.Location = new System.Drawing.Point(23, 36);
+            this.groupbox2.Name = "groupbox2";
+            this.groupbox2.Size = new System.Drawing.Size(189, 130);
+            this.groupbox2.TabIndex = 21;
+            this.groupbox2.TabStop = false;
+            this.groupbox2.Text = "Kitap Bilgileri";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lblMTel);
+            this.groupBox3.Controls.Add(this.lblMPosta);
+            this.groupBox3.Controls.Add(this.lblMSad);
+            this.groupBox3.Controls.Add(this.lblMAd);
+            this.groupBox3.Location = new System.Drawing.Point(218, 39);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 201);
+            this.groupBox3.TabIndex = 22;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Müsteri Bilgileri";
             // 
             // emanetForm
             // 
@@ -281,6 +305,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTablo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupbox2.ResumeLayout(false);
+            this.groupbox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +335,7 @@
         private System.Windows.Forms.Button btnKitapSec;
         private System.Windows.Forms.Label uyeId;
         private System.Windows.Forms.Label kitapId;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupbox2;
     }
 }
