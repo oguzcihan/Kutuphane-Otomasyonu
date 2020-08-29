@@ -23,7 +23,7 @@ namespace Kutuphane_Otomasyonu2020
             int ret;
             try
             {
-                ret = (int)cmd.ExecuteScalar();
+                ret = Convert.ToInt32(cmd.ExecuteScalar());
                 return ret;
             }
             catch (Exception ex)

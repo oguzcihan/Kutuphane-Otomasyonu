@@ -33,17 +33,6 @@ namespace Kutuphane_Otomasyonu2020
             DataTable dt = new DataTable(tabload);
             sda.Fill(dt);
             dataGrid.DataSource = dt.DefaultView;
-            veritabanikapa();
-        }
-        public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string tabload,string sutun)
-        {
-            SqlCommand cmd = new SqlCommand(sorgu, baglanti);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable(tabload);
-            sda.Fill(dt);
-            comboBox.DataSource = dt.DefaultView;
-            comboBox.DisplayMember = sutun;
-            veritabanikapa();
         }
         public int idbul(string sorgu, Dictionary<string, string> input)
         {

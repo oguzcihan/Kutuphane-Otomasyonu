@@ -58,7 +58,6 @@
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="Emanet.cs" />
-    <Compile Include="EmanetDuzenleClass.cs" />
     <Compile Include="EmanetEkleClass.cs" />
     <Compile Include="emanetForm.cs">
       <SubType>Form</SubType>
