@@ -56,6 +56,12 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="deneme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deneme.Designer.cs">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Emanet.cs" />
     <Compile Include="EmanetEkleClass.cs" />
     <Compile Include="emanetForm.cs">
@@ -79,6 +85,13 @@
     </Compile>
     <Compile Include="GirisClass.cs" />
     <Compile Include="Isimler.cs" />
+    <Compile Include="IUkitapsec.cs" />
+    <Compile Include="kitapAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapAra.Designer.cs">
+      <DependentUpon>kitapAra.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitapEkle.cs" />
     <Compile Include="kitapKayit.cs">
       <SubType>Form</SubType>
@@ -113,6 +126,9 @@
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deneme.resx">
+      <DependentUpon>deneme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="emanetForm.resx">
       <DependentUpon>emanetForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Giris.resx">
       <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapAra.resx">
+      <DependentUpon>kitapAra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitapKayit.resx">
       <DependentUpon>kitapKayit.cs</DependentUpon>
