@@ -159,5 +159,23 @@ namespace Kutuphane_Otomasyonu2020
             ara.ara(dataGridView1, "select*from Uyeler where uyeAdi like'", textBox7.Text, "Uyeler");
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+
+                textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                textBox5.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+                textBox6.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+
+        }
     }
 }
