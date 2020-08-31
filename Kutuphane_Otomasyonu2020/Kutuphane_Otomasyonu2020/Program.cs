@@ -16,7 +16,7 @@ namespace Kutuphane_Otomasyonu2020
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Giris());
+            Application.Run(new emanetForm());
         }
     }
 }

@@ -34,15 +34,6 @@ namespace Kutuphane_Otomasyonu2020
             sda.Fill(dt);
             dataGrid.DataSource = dt.DefaultView;
         }
-        public void ComboBoxDoldur(ComboBox comboBox,string sorgu,string tabload,string sutun)
-        {
-            SqlCommand cmd = new SqlCommand(sorgu, baglanti);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable(tabload);
-            sda.Fill(dt);
-            comboBox.DataSource = dt.DefaultView;
-            comboBox.DisplayMember = sutun;
-        }
         public int idbul(string sorgu, Dictionary<string, string> input)
         {
             var cmd = new SqlCommand
@@ -54,8 +45,8 @@ namespace Kutuphane_Otomasyonu2020
                 cmd.Parameters.AddWithValue(i.Key, i.Value);
             }
             cmd.Connection = baglanti;
-
-            if (int.TryParse(cmd.ExecuteScalar().ToString(), out int ret))
+            int ret;
+            if (int.TryParse(cmd.ExecuteScalar().ToString(), out ret))
             {
                 return ret;
             }
