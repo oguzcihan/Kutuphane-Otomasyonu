@@ -52,27 +52,33 @@ namespace Kutuphane_Otomasyonu2020
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            EmanetSilClass silBtn = new EmanetSilClass();
-            Dictionary<string, string> dic = new Dictionary<string, string>();
-            dic.Add("@uyeAdi", uyeA);
-            dic.Add("@uyeSoyad", uyeS);
-            dic.Add("@uyeTel", uyeT);
-            dic.Add("@uyePosta", uyeP);
-            int uyeId = silBtn.idbul("SELECT uyeNo FROM Uyeler WHERE uyeAdi = @uyeAdi AND uyeSoyad = @uyeSoyad AND uyeTel = @uyeTel AND uyePosta = @uyePosta",dic);
-            dic.Clear();
-            dic.Add("@kitapAdi", kitapA);
-            dic.Add("@yazar", yazar);
-            dic.Add("@yayınEvi", yayinE);
-            int kitapId = silBtn.idbul("SELECT kitapId FROM Kitaplar WHERE kitapAdi = @kitapAdi AND yazar = @yazar AND yayınEvi = @yayınEvi ", dic);
-            dic.Clear();
-            dic.Add("@uyeNo", uyeId.ToString());
-            dic.Add("@kitapId", kitapId.ToString());
-            int emanetId = silBtn.idbul("SELECT emanetId FROM OduncKitap WHERE uyeNo=@uyeNo AND kitapId = @kitapId ", dic);
-            dic.Clear();
-            dic.Add("@emanetID", emanetId.ToString());
-            silBtn.delete("DELETE FROM OduncKitap WHERE emanetId=@emanetID", dic);
-            silBtn.DataGridDoldur(dgvSilTablo, "SELECT uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
-
+            if (uyeA == "")
+            {
+                MessageBox.Show("Boş satır silinemez.");
+            }
+            else
+            {
+                EmanetSilClass silBtn = new EmanetSilClass();
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+                dic.Add("@uyeAdi", uyeA);
+                dic.Add("@uyeSoyad", uyeS);
+                dic.Add("@uyeTel", uyeT);
+                dic.Add("@uyePosta", uyeP);
+                int uyeId = silBtn.idbul("SELECT uyeNo FROM Uyeler WHERE uyeAdi = @uyeAdi AND uyeSoyad = @uyeSoyad AND uyeTel = @uyeTel AND uyePosta = @uyePosta", dic);
+                dic.Clear();
+                dic.Add("@kitapAdi", kitapA);
+                dic.Add("@yazar", yazar);
+                dic.Add("@yayınEvi", yayinE);
+                int kitapId = silBtn.idbul("SELECT kitapId FROM Kitaplar WHERE kitapAdi = @kitapAdi AND yazar = @yazar AND yayınEvi = @yayınEvi ", dic);
+                dic.Clear();
+                dic.Add("@uyeNo", uyeId.ToString());
+                dic.Add("@kitapId", kitapId.ToString());
+                int emanetId = silBtn.idbul("SELECT emanetId FROM OduncKitap WHERE uyeNo=@uyeNo AND kitapId = @kitapId ", dic);
+                dic.Clear();
+                dic.Add("@emanetID", emanetId.ToString());
+                silBtn.delete("DELETE FROM OduncKitap WHERE emanetId=@emanetID", dic);
+                silBtn.DataGridDoldur(dgvSilTablo, "SELECT uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+            }
         }
 
 
