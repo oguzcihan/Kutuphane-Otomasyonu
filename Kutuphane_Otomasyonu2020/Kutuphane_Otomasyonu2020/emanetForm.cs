@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Kutuphane_Otomasyonu2020
 {
@@ -159,6 +160,50 @@ namespace Kutuphane_Otomasyonu2020
             }
             oku.Close();
             baglanti.Close();
+        }
+
+        private void txtKitapId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            if (txtKitapId.SelectionStart > 0)
+            {
+                
+
+            }
+        }
+
+        private void txtUyeId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void txtKitapId_KeyUp(object sender, KeyEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox == null) { return; }
+
+            if (e.KeyCode == Keys.Back && textBox.Text.Length == 0)
+            {
+                lblKAd.Text = " -- ";
+                lblKYazar.Text = " -- ";
+                lblKYEvi.Text = " -- ";
+                this.Select(true, false);
+            }
+        }
+
+        private void txtUyeId_KeyUp(object sender, KeyEventArgs e)
+        {
+            var textBox = sender as TextBox;
+            if (textBox == null) { return; }
+
+            if (e.KeyCode == Keys.Back && textBox.Text.Length == 0)
+            {
+                lblAd.Text = " -- ";
+                lblSoyad.Text = " -- ";
+                lblTel.Text = " -- ";
+                lblPosta.Text = " -- ";
+                this.Select(true, false);
+            }
         }
     }
 }
