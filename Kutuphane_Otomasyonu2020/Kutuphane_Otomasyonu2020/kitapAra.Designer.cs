@@ -137,7 +137,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "kitapAra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapAra";
             this.Load += new System.EventHandler(this.kitapAra_Load);
             this.groupBox2.ResumeLayout(false);

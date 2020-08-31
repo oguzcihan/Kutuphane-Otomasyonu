@@ -56,12 +56,6 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="deneme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="deneme.Designer.cs">
-      <DependentUpon>deneme.cs</DependentUpon>
-    </Compile>
     <Compile Include="Emanet.cs" />
     <Compile Include="EmanetEkleClass.cs" />
     <Compile Include="emanetForm.cs">
@@ -123,11 +117,14 @@
     <Compile Include="personelsil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uyeAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uyeAra.Designer.cs">
+      <DependentUpon>uyeAra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="deneme.resx">
-      <DependentUpon>deneme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="emanetForm.resx">
       <DependentUpon>emanetForm.cs</DependentUpon>
@@ -162,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="uyeAra.resx">
+      <DependentUpon>uyeAra.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

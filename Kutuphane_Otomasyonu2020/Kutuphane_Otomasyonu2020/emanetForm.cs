@@ -41,14 +41,6 @@ namespace Kutuphane_Otomasyonu2020
             dgvTablo.Columns[8].HeaderText = "Emanet Verildiği Tarih";
             dgvTablo.Columns[9].HeaderText = "Geri Alınacağı Tarih";
 
-            lblMAd.Visible = false;
-            lblMSad.Visible = false;
-            lblMTel.Visible = false;
-            lblMPosta.Visible = false;
-            lblKAd.Visible = false;
-            lblKYazar.Visible = false;
-            lblKYEvi.Visible = false;
-            
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -92,17 +84,81 @@ namespace Kutuphane_Otomasyonu2020
         }
 
 
-       
 
+        uyeAra uyeAra = new uyeAra();
         private void btnUyeAra_Click(object sender, EventArgs e)
         {
+            if (uyeAra == null)
+            {
+                uyeAra = new uyeAra();
+            }
+            uyeAra.uyeSecildi += ara_uyesecildi;
+            uyeAra.ShowDialog();
+        }
+        public void ara_uyesecildi()
+        {
+            txtUyeId.Text = uyeAra.SecilenUye;
+        }
+
+        kitapAra ara = new kitapAra();
+        private void btnAra_Click(object sender, EventArgs e)
+        {
+            if (ara == null)
+            {
+                ara = new kitapAra();
+            }
+            ara.kitapSecildi += ara_kitapsecildi;
+            ara.ShowDialog();
+        }
+        
+        public void ara_kitapsecildi()
+        {
+            txtKitapId.Text = ara.SecilenKitap;
+        }
+        public void oku()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from Kitaplar where kitapId=@kod", baglanti);
+            komut.Parameters.AddWithValue("@kod", txtKitapId.Text);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                lblKAd.Text = oku["kitapAdi"].ToString();
+                lblKYazar.Text = oku["yazar"].ToString();
+                lblKYEvi.Text = oku["yayınEvi"].ToString();
+               
+            }
+            oku.Close();
+            baglanti.Close();
 
         }
 
-        private void btnAra_Click(object sender, EventArgs e)
+        private void txtKitapId_TextChanged(object sender, EventArgs e)
         {
-            Form KAra = new kitapAra();
-            KAra.ShowDialog();
+            oku();
+        }
+
+        private void txtUyeId_TextChanged(object sender, EventArgs e)
+        {
+            uyeOku();
+        }
+        public void uyeOku()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("select * from Uyeler where uyeNo=@no", baglanti);
+            komut.Parameters.AddWithValue("@no", txtUyeId.Text);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                lblAd.Text = oku["uyeAdi"].ToString();
+                lblSoyad.Text = oku["uyeSoyad"].ToString();
+                lblTel.Text = oku["uyeTel"].ToString();
+                lblPosta.Text = oku["uyePosta"].ToString();
+
+
+            }
+            oku.Close();
+            baglanti.Close();
         }
     }
 }
