@@ -83,5 +83,11 @@ namespace Kutuphane_Otomasyonu2020
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form uye = new Uyeekle();
+            uye.ShowDialog();
+        }
     }
 }

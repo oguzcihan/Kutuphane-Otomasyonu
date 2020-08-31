@@ -142,20 +142,20 @@
             // kitapKayıtToolStripMenuItem
             // 
             this.kitapKayıtToolStripMenuItem.Name = "kitapKayıtToolStripMenuItem";
-            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kitapKayıtToolStripMenuItem.Text = "Kitap Kayıt";
             this.kitapKayıtToolStripMenuItem.Click += new System.EventHandler(this.kitapKayıtToolStripMenuItem_Click);
             // 
             // kitapListesiToolStripMenuItem
             // 
             this.kitapListesiToolStripMenuItem.Name = "kitapListesiToolStripMenuItem";
-            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kitapListesiToolStripMenuItem.Text = "Kitap Listesi";
             // 
             // kitapSilToolStripMenuItem
             // 
             this.kitapSilToolStripMenuItem.Name = "kitapSilToolStripMenuItem";
-            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.kitapSilToolStripMenuItem.Text = "Kitap Sil";
             // 
             // toolStripSeparator1
@@ -175,13 +175,13 @@
             // personelKayıtToolStripMenuItem
             // 
             this.personelKayıtToolStripMenuItem.Name = "personelKayıtToolStripMenuItem";
-            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.personelKayıtToolStripMenuItem.Text = "Personel Kayıt";
             // 
             // personelListesiToolStripMenuItem
             // 
             this.personelListesiToolStripMenuItem.Name = "personelListesiToolStripMenuItem";
-            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.personelListesiToolStripMenuItem.Text = "Personel Listesi";
             // 
             // üyeİşlemleriToolStripMenuItem
@@ -196,13 +196,13 @@
             // üyeKayıtToolStripMenuItem
             // 
             this.üyeKayıtToolStripMenuItem.Name = "üyeKayıtToolStripMenuItem";
-            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.üyeKayıtToolStripMenuItem.Text = "Üye Kayıt";
             // 
             // üyeListesiToolStripMenuItem
             // 
             this.üyeListesiToolStripMenuItem.Name = "üyeListesiToolStripMenuItem";
-            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.üyeListesiToolStripMenuItem.Text = "Üye Listesi";
             // 
             // toolStripSeparator2
@@ -222,13 +222,13 @@
             // yedekleToolStripMenuItem
             // 
             this.yedekleToolStripMenuItem.Name = "yedekleToolStripMenuItem";
-            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.yedekleToolStripMenuItem.Text = "Yedekle";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // yardımToolStripMenuItem
@@ -295,6 +295,7 @@
             this.button5.Text = "Üye Kayıt";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // menuStrip2
             // 
