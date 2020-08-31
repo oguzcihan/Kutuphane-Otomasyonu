@@ -16,5 +16,10 @@ namespace Kutuphane_Otomasyonu2020
         {
             InitializeComponent();
         }
+
+        private void deneme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -65,3 +65,5 @@ C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\K
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.exe
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.pdb
+C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.deneme.resources
+C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapAra.resources
