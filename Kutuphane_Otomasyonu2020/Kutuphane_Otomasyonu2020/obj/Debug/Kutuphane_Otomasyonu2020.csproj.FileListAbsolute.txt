@@ -91,3 +91,4 @@ C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu
 C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.csproj.GenerateResource.Cache
 C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.exe
 C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.pdb
+C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Uyeekle.resources

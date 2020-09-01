@@ -35,6 +35,7 @@
             // 
             // dgvSilTablo
             // 
+            this.dgvSilTablo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvSilTablo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSilTablo.Location = new System.Drawing.Point(12, 12);
             this.dgvSilTablo.Name = "dgvSilTablo";
@@ -49,6 +50,7 @@
             // 
             // btnSil
             // 
+            this.btnSil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSil.Location = new System.Drawing.Point(500, 596);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(131, 45);
@@ -61,6 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1149, 698);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.dgvSilTablo);

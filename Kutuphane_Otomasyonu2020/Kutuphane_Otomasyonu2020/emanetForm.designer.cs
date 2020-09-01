@@ -127,6 +127,7 @@
             // 
             // btnKaydet
             // 
+            this.btnKaydet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(420, 304);
             this.btnKaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -156,6 +157,7 @@
             // 
             // btnSil
             // 
+            this.btnSil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.Location = new System.Drawing.Point(644, 304);
             this.btnSil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -168,6 +170,7 @@
             // 
             // dgvTablo
             // 
+            this.dgvTablo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvTablo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablo.Location = new System.Drawing.Point(3, 363);
             this.dgvTablo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -193,6 +196,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.btnUyeAra);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupbox2);
@@ -200,9 +204,9 @@
             this.groupBox1.Controls.Add(this.lblGTarih);
             this.groupBox1.Controls.Add(this.btnAra);
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1095, 272);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;

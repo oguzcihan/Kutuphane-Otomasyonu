@@ -78,7 +78,7 @@ namespace Kutuphane_Otomasyonu2020
                     return;
 
                 }
-                Environment.Exit(-1);
+                Environment.Exit(0);
 
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
