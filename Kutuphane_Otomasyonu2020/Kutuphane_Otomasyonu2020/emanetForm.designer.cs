@@ -181,6 +181,7 @@
             this.dgvTablo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTablo.Size = new System.Drawing.Size(1123, 306);
             this.dgvTablo.TabIndex = 21;
+            this.dgvTablo.SelectionChanged += new System.EventHandler(this.dgvTablo_SelectionChanged);
             // 
             // btnAra
             // 
