@@ -50,7 +50,7 @@ namespace Kutuphane_Otomasyonu2020
             dataGridView1.Columns[4].HeaderText = name.sayfa;
             dataGridView1.Columns[5].HeaderText = name.yayin;
             dataGridView1.Columns[6].HeaderText = name.not;
-            dataGridView1.Columns[6].Width = 300;
+            
 
         }
         public void random()

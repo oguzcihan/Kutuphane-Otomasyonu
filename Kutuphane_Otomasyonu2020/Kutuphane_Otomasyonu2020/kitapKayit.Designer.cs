@@ -64,11 +64,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(533, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(356, 51);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(564, 558);
+            this.dataGridView1.Size = new System.Drawing.Size(741, 475);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -76,9 +76,9 @@
             // 
             this.btnkaydet.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnkaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnkaydet.Location = new System.Drawing.Point(62, 28);
+            this.btnkaydet.Location = new System.Drawing.Point(34, 26);
             this.btnkaydet.Name = "btnkaydet";
-            this.btnkaydet.Size = new System.Drawing.Size(98, 32);
+            this.btnkaydet.Size = new System.Drawing.Size(72, 32);
             this.btnkaydet.TabIndex = 15;
             this.btnkaydet.Text = "Kaydet";
             this.btnkaydet.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@
             this.Butonlar.Controls.Add(this.btnkaydet);
             this.Butonlar.Controls.Add(this.btnsil);
             this.Butonlar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Butonlar.Location = new System.Drawing.Point(12, 511);
+            this.Butonlar.Location = new System.Drawing.Point(1, 453);
             this.Butonlar.Name = "Butonlar";
-            this.Butonlar.Size = new System.Drawing.Size(515, 98);
+            this.Butonlar.Size = new System.Drawing.Size(349, 73);
             this.Butonlar.TabIndex = 19;
             this.Butonlar.TabStop = false;
             this.Butonlar.Text = "Butonlar";
@@ -103,9 +103,9 @@
             // 
             this.btnduzenle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnduzenle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnduzenle.Location = new System.Drawing.Point(196, 28);
+            this.btnduzenle.Location = new System.Drawing.Point(136, 26);
             this.btnduzenle.Name = "btnduzenle";
-            this.btnduzenle.Size = new System.Drawing.Size(95, 32);
+            this.btnduzenle.Size = new System.Drawing.Size(70, 32);
             this.btnduzenle.TabIndex = 16;
             this.btnduzenle.Text = "Düzenle";
             this.btnduzenle.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // 
             this.btnsil.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnsil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnsil.Location = new System.Drawing.Point(315, 28);
+            this.btnsil.Location = new System.Drawing.Point(237, 26);
             this.btnsil.Name = "btnsil";
-            this.btnsil.Size = new System.Drawing.Size(95, 32);
+            this.btnsil.Size = new System.Drawing.Size(74, 32);
             this.btnsil.TabIndex = 17;
             this.btnsil.Text = "Sil";
             this.btnsil.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             // txtkitapAdi
             // 
             this.txtkitapAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtkitapAdi.Location = new System.Drawing.Point(196, 115);
+            this.txtkitapAdi.Location = new System.Drawing.Point(112, 87);
             this.txtkitapAdi.Name = "txtkitapAdi";
             this.txtkitapAdi.Size = new System.Drawing.Size(151, 24);
             this.txtkitapAdi.TabIndex = 9;
@@ -167,7 +167,7 @@
             // txtYazar
             // 
             this.txtYazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYazar.Location = new System.Drawing.Point(195, 160);
+            this.txtYazar.Location = new System.Drawing.Point(111, 132);
             this.txtYazar.Name = "txtYazar";
             this.txtYazar.Size = new System.Drawing.Size(151, 24);
             this.txtYazar.TabIndex = 10;
@@ -176,7 +176,7 @@
             // 
             this.lblnot.AutoSize = true;
             this.lblnot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblnot.Location = new System.Drawing.Point(159, 354);
+            this.lblnot.Location = new System.Drawing.Point(75, 326);
             this.lblnot.Name = "lblnot";
             this.lblnot.Size = new System.Drawing.Size(36, 18);
             this.lblnot.TabIndex = 7;
@@ -189,7 +189,7 @@
             this.cmbBaski.FormattingEnabled = true;
             this.cmbBaski.Items.AddRange(new object[] {
             "-- Seçiniz --"});
-            this.cmbBaski.Location = new System.Drawing.Point(195, 207);
+            this.cmbBaski.Location = new System.Drawing.Point(111, 179);
             this.cmbBaski.Name = "cmbBaski";
             this.cmbBaski.Size = new System.Drawing.Size(151, 26);
             this.cmbBaski.TabIndex = 11;
@@ -198,7 +198,7 @@
             // 
             this.lblyayınevi.AutoSize = true;
             this.lblyayınevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblyayınevi.Location = new System.Drawing.Point(124, 308);
+            this.lblyayınevi.Location = new System.Drawing.Point(40, 280);
             this.lblyayınevi.Name = "lblyayınevi";
             this.lblyayınevi.Size = new System.Drawing.Size(65, 18);
             this.lblyayınevi.TabIndex = 6;
@@ -207,7 +207,7 @@
             // txtsayfaSayisi
             // 
             this.txtsayfaSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtsayfaSayisi.Location = new System.Drawing.Point(195, 258);
+            this.txtsayfaSayisi.Location = new System.Drawing.Point(111, 230);
             this.txtsayfaSayisi.Name = "txtsayfaSayisi";
             this.txtsayfaSayisi.Size = new System.Drawing.Size(151, 24);
             this.txtsayfaSayisi.TabIndex = 12;
@@ -217,7 +217,7 @@
             // 
             this.lblsayfaSayisi.AutoSize = true;
             this.lblsayfaSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblsayfaSayisi.Location = new System.Drawing.Point(100, 261);
+            this.lblsayfaSayisi.Location = new System.Drawing.Point(16, 233);
             this.lblsayfaSayisi.Name = "lblsayfaSayisi";
             this.lblsayfaSayisi.Size = new System.Drawing.Size(92, 18);
             this.lblsayfaSayisi.TabIndex = 5;
@@ -227,7 +227,7 @@
             // 
             this.lblyazar.AutoSize = true;
             this.lblyazar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblyazar.Location = new System.Drawing.Point(140, 163);
+            this.lblyazar.Location = new System.Drawing.Point(56, 135);
             this.lblyazar.Name = "lblyazar";
             this.lblyazar.Size = new System.Drawing.Size(50, 18);
             this.lblyazar.TabIndex = 4;
@@ -236,7 +236,7 @@
             // txtNot
             // 
             this.txtNot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtNot.Location = new System.Drawing.Point(195, 354);
+            this.txtNot.Location = new System.Drawing.Point(111, 326);
             this.txtNot.Multiline = true;
             this.txtNot.Name = "txtNot";
             this.txtNot.Size = new System.Drawing.Size(151, 52);
@@ -246,7 +246,7 @@
             // 
             this.lblbaskiYili.AutoSize = true;
             this.lblbaskiYili.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblbaskiYili.Location = new System.Drawing.Point(121, 210);
+            this.lblbaskiYili.Location = new System.Drawing.Point(37, 182);
             this.lblbaskiYili.Name = "lblbaskiYili";
             this.lblbaskiYili.Size = new System.Drawing.Size(71, 18);
             this.lblbaskiYili.TabIndex = 3;
@@ -256,7 +256,7 @@
             // 
             this.lblkitapAdi.AutoSize = true;
             this.lblkitapAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblkitapAdi.Location = new System.Drawing.Point(122, 118);
+            this.lblkitapAdi.Location = new System.Drawing.Point(38, 90);
             this.lblkitapAdi.Name = "lblkitapAdi";
             this.lblkitapAdi.Size = new System.Drawing.Size(69, 18);
             this.lblkitapAdi.TabIndex = 2;
@@ -266,7 +266,7 @@
             // 
             this.kitap.AutoSize = true;
             this.kitap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kitap.Location = new System.Drawing.Point(124, 75);
+            this.kitap.Location = new System.Drawing.Point(40, 47);
             this.kitap.Name = "kitap";
             this.kitap.Size = new System.Drawing.Size(69, 18);
             this.kitap.TabIndex = 1;
@@ -275,7 +275,7 @@
             // txtYayinevi
             // 
             this.txtYayinevi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYayinevi.Location = new System.Drawing.Point(195, 305);
+            this.txtYayinevi.Location = new System.Drawing.Point(111, 277);
             this.txtYayinevi.Name = "txtYayinevi";
             this.txtYayinevi.Size = new System.Drawing.Size(151, 24);
             this.txtYayinevi.TabIndex = 13;
@@ -284,11 +284,11 @@
             // 
             this.lblkitapNo.AutoSize = true;
             this.lblkitapNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblkitapNo.Location = new System.Drawing.Point(193, 75);
+            this.lblkitapNo.Location = new System.Drawing.Point(109, 47);
             this.lblkitapNo.Name = "lblkitapNo";
-            this.lblkitapNo.Size = new System.Drawing.Size(12, 18);
+            this.lblkitapNo.Size = new System.Drawing.Size(18, 18);
             this.lblkitapNo.TabIndex = 15;
-            this.lblkitapNo.Text = ".";
+            this.lblkitapNo.Text = "--";
             // 
             // İşlemler
             // 
@@ -309,9 +309,9 @@
             this.İşlemler.Controls.Add(this.txtYazar);
             this.İşlemler.Controls.Add(this.txtkitapAdi);
             this.İşlemler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.İşlemler.Location = new System.Drawing.Point(12, 12);
+            this.İşlemler.Location = new System.Drawing.Point(1, 8);
             this.İşlemler.Name = "İşlemler";
-            this.İşlemler.Size = new System.Drawing.Size(515, 493);
+            this.İşlemler.Size = new System.Drawing.Size(349, 444);
             this.İşlemler.TabIndex = 18;
             this.İşlemler.TabStop = false;
             this.İşlemler.Text = "İşlemler";
@@ -322,7 +322,7 @@
             this.btnyenikayit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnyenikayit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnyenikayit.Image = ((System.Drawing.Image)(resources.GetObject("btnyenikayit.Image")));
-            this.btnyenikayit.Location = new System.Drawing.Point(453, 22);
+            this.btnyenikayit.Location = new System.Drawing.Point(287, 27);
             this.btnyenikayit.Name = "btnyenikayit";
             this.btnyenikayit.Size = new System.Drawing.Size(56, 38);
             this.btnyenikayit.TabIndex = 166;
@@ -333,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 611);
+            this.ClientSize = new System.Drawing.Size(1099, 528);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox7);
