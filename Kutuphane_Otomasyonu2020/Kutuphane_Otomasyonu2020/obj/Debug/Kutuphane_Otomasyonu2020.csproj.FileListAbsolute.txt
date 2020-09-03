@@ -92,3 +92,6 @@ C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu
 C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.exe
 C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.pdb
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Uyeekle.resources
+D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapAra.resources
+D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.uyeAra.resources
+D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Uyeekle.resources
