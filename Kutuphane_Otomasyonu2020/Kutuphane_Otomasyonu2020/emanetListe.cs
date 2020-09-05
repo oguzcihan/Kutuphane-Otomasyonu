@@ -33,6 +33,7 @@ namespace Kutuphane_Otomasyonu2020
         private void emanetListe_Load(object sender, EventArgs e)
         {
             liste();
+            comboBox1.SelectedIndex = 0;
         }
         public void liste()
         {
@@ -59,6 +60,86 @@ namespace Kutuphane_Otomasyonu2020
             EmanetListeleSecilen = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["emanetId"].Value.ToString();
             emanetListeDetay detay = new emanetListeDetay();
             detay.ShowDialog();
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            birimler();
+        }
+        public void birimler()
+        {
+            string emnaetIdS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId Where teslimEdildi='Hayır' AND emanetId like '";
+            string uyeAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId Where teslimEdildi='Hayır' AND uyeAdi like '";
+            string KitapAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId Where teslimEdildi='Hayır' AND kitapAdi like '";
+
+            try
+            {
+                if (comboBox1.Text == "Emanet No")
+                {
+                    liste();
+                    baglanti.Open();
+                    SqlDataAdapter ada = new SqlDataAdapter(emnaetIdS +
+                    txtAra.Text + "%'", baglanti);
+                    dt.Clear();
+                    ada.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    baglanti.Close();
+                    
+
+                }
+                else if (comboBox1.Text == "Uye Ad")
+                {
+                    liste();
+                    baglanti.Open();
+                    SqlDataAdapter ada = new SqlDataAdapter(uyeAS +
+                    txtAra.Text + "%'", baglanti);
+                    dt.Clear();
+                    ada.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    baglanti.Close();
+                }
+                else if (comboBox1.Text == "Kitap Adı")
+                {
+                    liste();
+                    baglanti.Open();
+                    SqlDataAdapter ada = new SqlDataAdapter(KitapAS +
+                    txtAra.Text + "%'", baglanti);
+                    dt.Clear();
+                    ada.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                    baglanti.Close();
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+        private void txtAra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(comboBox1.Text=="-- Seçiniz --")
+            {
+                txtAra.Text = "";
+                MessageBox.Show("Lütfen Arama Türü Seçiniz.");
+                txtAra.Text = "";
+            }
+            else if(comboBox1.Text=="Emanet No")
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else if (comboBox1.Text=="Uye Ad")
+            {
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            else if(comboBox1.Text=="Kitap Adı")
+            {
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            
         }
     }
 }

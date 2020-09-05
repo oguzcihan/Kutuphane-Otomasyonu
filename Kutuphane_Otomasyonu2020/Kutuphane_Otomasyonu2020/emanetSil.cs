@@ -55,11 +55,24 @@ namespace Kutuphane_Otomasyonu2020
             }
             else
             {
-                EmanetSilClass silBtn = new EmanetSilClass();
-                Dictionary<string, string> dic = new Dictionary<string, string>();
-                dic.Add("@emanetID", emanetId.ToString());
-                silBtn.delete("DELETE FROM OduncKitap WHERE emanetId=@emanetID", dic);
-                silBtn.DataGridDoldur(dgvSilTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+                DialogResult sonuc;
+                sonuc = MessageBox.Show("Kaydı silmek istiyor musunuz?", "Uyarı", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (sonuc == DialogResult.OK)
+                {
+                    try
+                    {
+                        EmanetSilClass silBtn = new EmanetSilClass();
+                        Dictionary<string, string> dic = new Dictionary<string, string>();
+                        dic.Add("@emanetID", emanetId.ToString());
+                        silBtn.delete("DELETE FROM OduncKitap WHERE emanetId=@emanetID", dic);
+                        silBtn.DataGridDoldur(dgvSilTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+                        MessageBox.Show("Kayıt silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
             }
         }
 

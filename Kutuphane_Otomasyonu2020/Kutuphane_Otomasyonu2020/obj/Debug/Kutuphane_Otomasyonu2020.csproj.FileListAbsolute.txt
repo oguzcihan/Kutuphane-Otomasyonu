@@ -97,3 +97,5 @@ D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\De
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Uyeekle.resources
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListe.resources
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListeDetay.resources
+C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListe.resources
+C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListeDetay.resources

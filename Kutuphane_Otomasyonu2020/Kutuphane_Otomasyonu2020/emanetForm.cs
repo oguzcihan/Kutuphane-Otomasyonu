@@ -53,29 +53,43 @@ namespace Kutuphane_Otomasyonu2020
             }
             else
             {
-                string tarih = "a";
-                EmanetEkleClass ekle = new EmanetEkleClass();
-                Dictionary<string, string> dic = new Dictionary<string, string>();
-                dic.Add("@uyeNo", txtUyeId.Text.ToString());
-                dic.Add("@kitapId", txtKitapId.Text.ToString());
-                dic.Add("@eTarih", tarih.ToString());
-                dic.Add("@gTarih", tarih.ToString());
-                dic.Add("@iTarih", tarih.ToString());
-                dic.Add("@notlar", tarih.ToString());
-                dic.Add("@tEdildi", tarih.ToString());
-                ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarih, EmanetNot, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
-                ekle.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
-                dgvTablo.Columns[0].HeaderText = "Emanet No";
-                dgvTablo.Columns[1].HeaderText = "Ad";
-                dgvTablo.Columns[2].HeaderText = "Soyad";
-                dgvTablo.Columns[3].HeaderText = "Telefon No:";
-                dgvTablo.Columns[4].HeaderText = "E-Posta";
-                dgvTablo.Columns[5].HeaderText = "Adres";
-                dgvTablo.Columns[6].HeaderText = "Kitap Adı";
-                dgvTablo.Columns[7].HeaderText = "Yazar";
-                dgvTablo.Columns[8].HeaderText = "Yayınevi";
-                dgvTablo.Columns[9].HeaderText = "Emanet Verildiği Tarih";
-                dgvTablo.Columns[10].HeaderText = "Geri Alınacağı Tarih";
+                DialogResult sonuc;
+                sonuc = MessageBox.Show("Kayıt eklemek istiyor musunuz?", "Uyarı", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (sonuc == DialogResult.OK)
+                {
+                    try
+                    {
+                        string tarih = "a";
+                        string teslim = "Hayır";
+                        EmanetEkleClass ekle = new EmanetEkleClass();
+                        Dictionary<string, string> dic = new Dictionary<string, string>();
+                        dic.Add("@uyeNo", txtUyeId.Text.ToString());
+                        dic.Add("@kitapId", txtKitapId.Text.ToString());
+                        dic.Add("@eTarih", tarih.ToString());
+                        dic.Add("@gTarih", tarih.ToString());
+                        dic.Add("@iTarih", tarih.ToString());
+                        dic.Add("@notlar", tarih.ToString());
+                        dic.Add("@tEdildi", teslim.ToString());
+                        ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarih, EmanetNot, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
+                        ekle.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+                        dgvTablo.Columns[0].HeaderText = "Emanet No";
+                        dgvTablo.Columns[1].HeaderText = "Ad";
+                        dgvTablo.Columns[2].HeaderText = "Soyad";
+                        dgvTablo.Columns[3].HeaderText = "Telefon No:";
+                        dgvTablo.Columns[4].HeaderText = "E-Posta";
+                        dgvTablo.Columns[5].HeaderText = "Adres";
+                        dgvTablo.Columns[6].HeaderText = "Kitap Adı";
+                        dgvTablo.Columns[7].HeaderText = "Yazar";
+                        dgvTablo.Columns[8].HeaderText = "Yayınevi";
+                        dgvTablo.Columns[9].HeaderText = "Emanet Verildiği Tarih";
+                        dgvTablo.Columns[10].HeaderText = "Geri Alınacağı Tarih";
+                        MessageBox.Show("Kayıt yapıldı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
             }
 
         }
@@ -171,11 +185,6 @@ namespace Kutuphane_Otomasyonu2020
         private void txtKitapId_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-            if (txtKitapId.SelectionStart > 0)
-            {
-                
-
-            }
         }
 
         private void txtUyeId_KeyPress(object sender, KeyPressEventArgs e)

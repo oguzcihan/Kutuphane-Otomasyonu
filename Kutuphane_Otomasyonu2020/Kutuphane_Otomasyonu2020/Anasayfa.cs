@@ -78,7 +78,7 @@ namespace Kutuphane_Otomasyonu2020
                     return;
 
                 }
-                Environment.Exit(-1);
+                Environment.Exit(0);
 
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -88,6 +88,23 @@ namespace Kutuphane_Otomasyonu2020
         {
             Form uye = new Uyeekle();
             uye.ShowDialog();
+        }
+
+        private void tarihiGeçenKitaplarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ödüçKitapVerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form emanet = new emanetForm();
+            emanet.ShowDialog();
+        }
+
+        private void ödünçKitapListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form teslim = new emanetListe();
+            teslim.ShowDialog();
         }
     }
 }
