@@ -87,7 +87,7 @@ namespace Kutuphane_Otomasyonu2020
                     
 
                 }
-                else if (comboBox1.Text == "Uye Ad")
+                else if (comboBox1.Text == "Üye Ad")
                 {
                     liste();
                     baglanti.Open();
@@ -129,7 +129,7 @@ namespace Kutuphane_Otomasyonu2020
             {
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
             }
-            else if (comboBox1.Text=="Uye Ad")
+            else if (comboBox1.Text=="Üye Ad")
             {
                 e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
