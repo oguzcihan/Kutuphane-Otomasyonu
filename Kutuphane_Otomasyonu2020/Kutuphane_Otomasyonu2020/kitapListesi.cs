@@ -19,7 +19,8 @@ namespace Kutuphane_Otomasyonu2020
 
         private void kitapListesi_Load(object sender, EventArgs e)
         {
-
+           
         }
+
     }
 }

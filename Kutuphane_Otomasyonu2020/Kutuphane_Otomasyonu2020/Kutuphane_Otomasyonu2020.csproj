@@ -79,6 +79,18 @@
     <Compile Include="emanetForm.designer.cs">
       <DependentUpon>emanetForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="emanetListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emanetListe.Designer.cs">
+      <DependentUpon>emanetListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emanetListeDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emanetListeDetay.Designer.cs">
+      <DependentUpon>emanetListeDetay.cs</DependentUpon>
+    </Compile>
     <Compile Include="emanetSil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +98,6 @@
       <DependentUpon>emanetSil.cs</DependentUpon>
     </Compile>
     <Compile Include="EmanetSilClass.cs" />
-    <Compile Include="EmanetTeslim.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +141,12 @@
     <Compile Include="PersonelKayıt.Designer.cs">
       <DependentUpon>PersonelKayıt.cs</DependentUpon>
     </Compile>
+    <Compile Include="personelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelListesi.Designer.cs">
+      <DependentUpon>personelListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="personelsil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,12 +164,24 @@
       <DependentUpon>Uyeekle.cs</DependentUpon>
     </Compile>
     <Compile Include="Uyekle.cs" />
+    <Compile Include="uyeListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uyeListesi.Designer.cs">
+      <DependentUpon>uyeListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="uyesil.cs" />
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="emanetForm.resx">
       <DependentUpon>emanetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emanetListe.resx">
+      <DependentUpon>emanetListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emanetListeDetay.resx">
+      <DependentUpon>emanetListeDetay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="emanetSil.resx">
       <DependentUpon>emanetSil.cs</DependentUpon>

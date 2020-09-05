@@ -23,8 +23,8 @@ namespace Kutuphane_Otomasyonu2020
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
-            
+
+
             lblkadi.Text = Giris.kullaniciAdi;
             lblgorev.Text = Giris.gorev;
 
@@ -51,7 +51,7 @@ namespace Kutuphane_Otomasyonu2020
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lbltarihsaat.Text= DateTime.Now.ToString();
+            lbltarihsaat.Text = DateTime.Now.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)

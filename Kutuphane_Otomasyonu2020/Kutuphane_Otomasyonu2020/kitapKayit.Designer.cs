@@ -42,7 +42,6 @@
             this.lblnot = new System.Windows.Forms.Label();
             this.cmbBaski = new System.Windows.Forms.ComboBox();
             this.lblyayınevi = new System.Windows.Forms.Label();
-            this.txtsayfaSayisi = new System.Windows.Forms.TextBox();
             this.lblsayfaSayisi = new System.Windows.Forms.Label();
             this.lblyazar = new System.Windows.Forms.Label();
             this.txtNot = new System.Windows.Forms.TextBox();
@@ -53,9 +52,11 @@
             this.lblkitapNo = new System.Windows.Forms.Label();
             this.İşlemler = new System.Windows.Forms.GroupBox();
             this.btnyenikayit = new System.Windows.Forms.Button();
+            this.txtsayfaSayisi = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Butonlar.SuspendLayout();
             this.İşlemler.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsayfaSayisi)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -204,15 +205,6 @@
             this.lblyayınevi.TabIndex = 6;
             this.lblyayınevi.Text = "Yayınevi:";
             // 
-            // txtsayfaSayisi
-            // 
-            this.txtsayfaSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtsayfaSayisi.Location = new System.Drawing.Point(111, 230);
-            this.txtsayfaSayisi.Name = "txtsayfaSayisi";
-            this.txtsayfaSayisi.Size = new System.Drawing.Size(151, 24);
-            this.txtsayfaSayisi.TabIndex = 12;
-            this.txtsayfaSayisi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsayfaSayisi_KeyPress);
-            // 
             // lblsayfaSayisi
             // 
             this.lblsayfaSayisi.AutoSize = true;
@@ -293,6 +285,7 @@
             // İşlemler
             // 
             this.İşlemler.BackColor = System.Drawing.SystemColors.Control;
+            this.İşlemler.Controls.Add(this.txtsayfaSayisi);
             this.İşlemler.Controls.Add(this.btnyenikayit);
             this.İşlemler.Controls.Add(this.lblkitapNo);
             this.İşlemler.Controls.Add(this.txtYayinevi);
@@ -302,7 +295,6 @@
             this.İşlemler.Controls.Add(this.txtNot);
             this.İşlemler.Controls.Add(this.lblyazar);
             this.İşlemler.Controls.Add(this.lblsayfaSayisi);
-            this.İşlemler.Controls.Add(this.txtsayfaSayisi);
             this.İşlemler.Controls.Add(this.lblyayınevi);
             this.İşlemler.Controls.Add(this.cmbBaski);
             this.İşlemler.Controls.Add(this.lblnot);
@@ -329,6 +321,14 @@
             this.btnyenikayit.UseVisualStyleBackColor = false;
             this.btnyenikayit.Click += new System.EventHandler(this.btnyenikayit_Click);
             // 
+            // txtsayfaSayisi
+            // 
+            this.txtsayfaSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtsayfaSayisi.Location = new System.Drawing.Point(111, 231);
+            this.txtsayfaSayisi.Name = "txtsayfaSayisi";
+            this.txtsayfaSayisi.Size = new System.Drawing.Size(152, 26);
+            this.txtsayfaSayisi.TabIndex = 167;
+            // 
             // kitapKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +348,7 @@
             this.Butonlar.ResumeLayout(false);
             this.İşlemler.ResumeLayout(false);
             this.İşlemler.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtsayfaSayisi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,7 +369,6 @@
         private System.Windows.Forms.Label lblnot;
         private System.Windows.Forms.ComboBox cmbBaski;
         private System.Windows.Forms.Label lblyayınevi;
-        private System.Windows.Forms.TextBox txtsayfaSayisi;
         private System.Windows.Forms.Label lblsayfaSayisi;
         private System.Windows.Forms.Label lblyazar;
         private System.Windows.Forms.TextBox txtNot;
@@ -379,5 +379,6 @@
         private System.Windows.Forms.Label lblkitapNo;
         private System.Windows.Forms.GroupBox İşlemler;
         private System.Windows.Forms.Button btnyenikayit;
+        private System.Windows.Forms.NumericUpDown txtsayfaSayisi;
     }
 }

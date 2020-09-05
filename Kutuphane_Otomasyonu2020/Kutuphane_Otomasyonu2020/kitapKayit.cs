@@ -24,7 +24,7 @@ namespace Kutuphane_Otomasyonu2020
         DataTable dt = new DataTable();
         private void kitapKayit_Load(object sender, EventArgs e)
         {
-
+     
             ToolTip Aciklama = new ToolTip();
             Aciklama.ToolTipTitle = "Temizle";
             Aciklama.ToolTipIcon = ToolTipIcon.Info;
@@ -42,6 +42,7 @@ namespace Kutuphane_Otomasyonu2020
             random();
             listele();
             cmbBaski.SelectedIndex = 0;
+            txtsayfaSayisi.ResetText();
             Isimler name = new Isimler();
             dataGridView1.Columns[0].HeaderText = name.kitapId;
             dataGridView1.Columns[1].HeaderText = name.kitapAdi;
@@ -107,7 +108,7 @@ namespace Kutuphane_Otomasyonu2020
         {
             txtkitapAdi.Clear();
             txtNot.Clear();
-            txtsayfaSayisi.Clear();
+            txtsayfaSayisi.ResetText();
             txtYayinevi.Clear();
             txtYazar.Clear();
             random();

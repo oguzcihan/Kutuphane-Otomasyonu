@@ -63,7 +63,7 @@ namespace Kutuphane_Otomasyonu2020
                 dic.Add("@iTarih", tarih.ToString());
                 dic.Add("@notlar", tarih.ToString());
                 dic.Add("@tEdildi", tarih.ToString());
-                ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarih, notlar, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
+                ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarih, EmanetNot, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
                 ekle.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
                 dgvTablo.Columns[0].HeaderText = "Emanet No";
                 dgvTablo.Columns[1].HeaderText = "Ad";
