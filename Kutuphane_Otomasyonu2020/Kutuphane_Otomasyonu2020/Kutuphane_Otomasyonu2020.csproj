@@ -86,6 +86,7 @@
       <DependentUpon>emanetSil.cs</DependentUpon>
     </Compile>
     <Compile Include="EmanetSilClass.cs" />
+    <Compile Include="EmanetTeslim.cs" />
     <Compile Include="Giris.cs">
       <SubType>Form</SubType>
     </Compile>

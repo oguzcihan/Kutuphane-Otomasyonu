@@ -15,9 +15,8 @@ namespace Kutuphane_Otomasyonu2020
 {
     public partial class emanetForm : Form
     {
-       
-        
-        
+        string emanetId;
+        string uyeAd, uyeSoyad, uyePosta, kitapAdi, yazar, yayinevi;
 
         SqlConnection baglanti;
         Connect con = new Connect();
@@ -26,21 +25,23 @@ namespace Kutuphane_Otomasyonu2020
             baglanti = new SqlConnection(con.adres);
             InitializeComponent();
             Emanet emanet = new Emanet();
-            emanet.DataGridDoldur(dgvTablo, "SELECT uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+            emanet.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
         }
 
         private void emanetForm_Load(object sender, EventArgs e)
         {            
-            dgvTablo.Columns[0].HeaderText = "Ad";
-            dgvTablo.Columns[1].HeaderText = "Soyad";
-            dgvTablo.Columns[2].HeaderText = "Telefon No:";
-            dgvTablo.Columns[3].HeaderText = "E-Posta";
-            dgvTablo.Columns[4].HeaderText = "Adres";
-            dgvTablo.Columns[5].HeaderText = "Kitap Adı";
-            dgvTablo.Columns[6].HeaderText = "Yazar";
-            dgvTablo.Columns[7].HeaderText = "Yayınevi";
-            dgvTablo.Columns[8].HeaderText = "Emanet Verildiği Tarih";
-            dgvTablo.Columns[9].HeaderText = "Geri Alınacağı Tarih";
+            dgvTablo.Columns[1].HeaderText = "Ad";
+            dgvTablo.Columns[2].HeaderText = "Soyad";
+            dgvTablo.Columns[3].HeaderText = "Telefon No:";
+            dgvTablo.Columns[4].HeaderText = "E-Posta";
+            dgvTablo.Columns[5].HeaderText = "Adres";
+            dgvTablo.Columns[6].HeaderText = "Kitap Adı";
+            dgvTablo.Columns[7].HeaderText = "Yazar";
+            dgvTablo.Columns[8].HeaderText = "Yayınevi";
+            dgvTablo.Columns[9].HeaderText = "Emanet Verildiği Tarih";
+            dgvTablo.Columns[10].HeaderText = "Geri Alınacağı Tarih";
+            dgvTablo.Columns[0].HeaderText = "Emanet No";
+           
 
         }
 
@@ -62,18 +63,19 @@ namespace Kutuphane_Otomasyonu2020
                 dic.Add("@iTarih", tarih.ToString());
                 dic.Add("@notlar", tarih.ToString());
                 dic.Add("@tEdildi", tarih.ToString());
-                ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarihi, notlar, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
-                ekle.DataGridDoldur(dgvTablo, "SELECT uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
-                dgvTablo.Columns[0].HeaderText = "Ad";
-                dgvTablo.Columns[1].HeaderText = "Soyad";
-                dgvTablo.Columns[2].HeaderText = "Telefon No:";
-                dgvTablo.Columns[3].HeaderText = "E-Posta";
-                dgvTablo.Columns[4].HeaderText = "Adres";
-                dgvTablo.Columns[5].HeaderText = "Kitap Adı";
-                dgvTablo.Columns[6].HeaderText = "Yazar";
-                dgvTablo.Columns[7].HeaderText = "Yayınevi";
-                dgvTablo.Columns[8].HeaderText = "Emanet Verildiği Tarih";
-                dgvTablo.Columns[9].HeaderText = "Geri Alınacağı Tarih";
+                ekle.insert("INSERT INTO OduncKitap (uyeNo, kitapId, emanetTarihi, gerialınacakTarih, islemTarih, notlar, teslimEdildi) VALUES(@uyeNo, @kitapId, @eTarih, @gTarih, @iTarih, @notlar, @tEdildi)", dic);
+                ekle.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+                dgvTablo.Columns[0].HeaderText = "Emanet No";
+                dgvTablo.Columns[1].HeaderText = "Ad";
+                dgvTablo.Columns[2].HeaderText = "Soyad";
+                dgvTablo.Columns[3].HeaderText = "Telefon No:";
+                dgvTablo.Columns[4].HeaderText = "E-Posta";
+                dgvTablo.Columns[5].HeaderText = "Adres";
+                dgvTablo.Columns[6].HeaderText = "Kitap Adı";
+                dgvTablo.Columns[7].HeaderText = "Yazar";
+                dgvTablo.Columns[8].HeaderText = "Yayınevi";
+                dgvTablo.Columns[9].HeaderText = "Emanet Verildiği Tarih";
+                dgvTablo.Columns[10].HeaderText = "Geri Alınacağı Tarih";
             }
 
         }
@@ -99,9 +101,12 @@ namespace Kutuphane_Otomasyonu2020
         public void ara_uyesecildi()
         {
             txtUyeId.Text = uyeAra.SecilenUye;
+            
         }
 
         kitapAra ara = new kitapAra();
+        private SqlCommand _cmd;
+
         private void btnAra_Click(object sender, EventArgs e)
         {
             if (ara == null)
@@ -115,6 +120,7 @@ namespace Kutuphane_Otomasyonu2020
         public void ara_kitapsecildi()
         {
             txtKitapId.Text = ara.SecilenKitap;
+            
         }
         public void oku()
         {
@@ -204,6 +210,18 @@ namespace Kutuphane_Otomasyonu2020
                 lblPosta.Text = " -- ";
                 this.Select(true, false);
             }
+        }
+
+        
+        private void dgvTablo_SelectionChanged(object sender, EventArgs e)
+        {
+            emanetId = dgvTablo.CurrentRow.Cells[0].ToString();
+            uyeAd = dgvTablo.CurrentRow.Cells[1].ToString();
+            uyeSoyad = dgvTablo.CurrentRow.Cells[2].ToString();
+            uyePosta = dgvTablo.CurrentRow.Cells[4].ToString();
+            kitapAdi = dgvTablo.CurrentRow.Cells[6].ToString();
+            yazar = dgvTablo.CurrentRow.Cells[7].ToString();
+            yayinevi = dgvTablo.CurrentRow.Cells[8].ToString();
         }
     }
 }

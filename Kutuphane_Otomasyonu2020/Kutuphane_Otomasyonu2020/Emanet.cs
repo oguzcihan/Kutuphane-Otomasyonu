@@ -53,5 +53,6 @@ namespace Kutuphane_Otomasyonu2020
             else
                 return 0;
         }
+        
     }   
 }
