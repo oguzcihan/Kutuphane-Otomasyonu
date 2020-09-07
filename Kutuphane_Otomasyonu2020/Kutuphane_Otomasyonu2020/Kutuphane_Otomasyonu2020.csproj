@@ -171,6 +171,12 @@
       <DependentUpon>uyeListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="uyesil.cs" />
+    <Compile Include="yardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yardim.Designer.cs">
+      <DependentUpon>yardim.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>

@@ -121,7 +121,15 @@ namespace Kutuphane_Otomasyonu2020
 
         private void yardımToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this,"help.chm");
+            //Help.ShowHelp(this,"help.chm");
+            Form frm = new yardim();
+            frm.ShowDialog();
+        }
+
+        private void personelListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new personelListesi();
+            frm.ShowDialog();
         }
     }
 }

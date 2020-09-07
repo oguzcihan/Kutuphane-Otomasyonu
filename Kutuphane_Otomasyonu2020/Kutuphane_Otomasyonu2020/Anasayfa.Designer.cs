@@ -188,14 +188,15 @@
             // personelKayıtToolStripMenuItem
             // 
             this.personelKayıtToolStripMenuItem.Name = "personelKayıtToolStripMenuItem";
-            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelKayıtToolStripMenuItem.Text = "Personel Kayıt";
             // 
             // personelListesiToolStripMenuItem
             // 
             this.personelListesiToolStripMenuItem.Name = "personelListesiToolStripMenuItem";
-            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelListesiToolStripMenuItem.Text = "Personel Listesi";
+            this.personelListesiToolStripMenuItem.Click += new System.EventHandler(this.personelListesiToolStripMenuItem_Click);
             // 
             // üyeİşlemleriToolStripMenuItem
             // 
