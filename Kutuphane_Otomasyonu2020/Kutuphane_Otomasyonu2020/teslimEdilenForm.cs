@@ -11,29 +11,23 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyonu2020
 {
-    public partial class emanetListe : Form
+    public partial class teslimEdilenForm : Form
     {
         SqlConnection baglanti;
         Connect con = new Connect();
         SqlDataAdapter da;
         DataTable dt = new DataTable();
-        public emanetListe()
+        public teslimEdilenForm()
         {
             baglanti = new SqlConnection(con.adres);
             InitializeComponent();
         }
 
-        
-        private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            
-
-        }
-
-        private void emanetListe_Load(object sender, EventArgs e)
+        private void teslimEdilenForm_Load(object sender, EventArgs e)
         {
             liste();
-            cbarmaT.SelectedIndex = 0;
+            cbaramaT.SelectedIndex = 0;
+
         }
         public void liste()
         {
@@ -43,46 +37,34 @@ namespace Kutuphane_Otomasyonu2020
             try
             {
                 baglanti.Open();
-                string sorgu = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Hayır' ";
+                string sorgu = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Evet' ";
                 SqlCommand komut2 = new SqlCommand(sorgu, baglanti);
-                da = new SqlDataAdapter(komut2); 
+                da = new SqlDataAdapter(komut2);
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
                 baglanti.Close();
                 komut2.Dispose();
 
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
-        }
-        public static string EmanetListeleSecilen;
-        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-            EmanetListeleSecilen = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["emanetId"].Value.ToString();
-            if (EmanetListeleSecilen == "")
+            catch (Exception ex)
             {
-                MessageBox.Show("Boş satır seçilemez.");
+                MessageBox.Show(ex.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            else
-            {
-                emanetListeDetay detay = new emanetListeDetay();
-                detay.ShowDialog();
-            }
-        }
 
+        }
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
             birimler();
         }
         public void birimler()
         {
-            string emnaetIdS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Hayır' AND emanetId like '";
-            string uyeAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Hayır' AND uyeAdi like '";
-            string KitapAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Hayır' AND kitapAdi like '";
+            string emnaetIdS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Evet' AND emanetId like '";
+            string uyeAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Evet' AND uyeAdi like '";
+            string KitapAS = "SELECT emanetId,uyeAdi,uyeSoyad,uyeTel,kitapAdi,emanetTarihi,gerialınacakTarih,teslimEdildi,EmanetNot From OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON Kitaplar.kitapId=OduncKitap.kitapId WHERE teslimEdildi='Evet' AND kitapAdi like '";
 
             try
             {
-                if (cbarmaT.Text == "Emanet No")
+                if (cbaramaT.Text == "Emanet No")
                 {
                     liste();
                     baglanti.Open();
@@ -92,10 +74,10 @@ namespace Kutuphane_Otomasyonu2020
                     ada.Fill(dt);
                     dataGridView1.DataSource = dt;
                     baglanti.Close();
-                    
+
 
                 }
-                else if (cbarmaT.Text == "Üye Ad")
+                else if (cbaramaT.Text == "Üye Ad")
                 {
                     liste();
                     baglanti.Open();
@@ -106,7 +88,7 @@ namespace Kutuphane_Otomasyonu2020
                     dataGridView1.DataSource = dt;
                     baglanti.Close();
                 }
-                else if (cbarmaT.Text == "Kitap Adı")
+                else if (cbaramaT.Text == "Kitap Adı")
                 {
                     liste();
                     baglanti.Open();
@@ -117,7 +99,7 @@ namespace Kutuphane_Otomasyonu2020
                     dataGridView1.DataSource = dt;
                     baglanti.Close();
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -127,30 +109,31 @@ namespace Kutuphane_Otomasyonu2020
 
         private void txtAra_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(cbarmaT.Text=="-- Seçiniz --")
+            if (cbaramaT.Text == "-- Seçiniz --")
             {
                 txtAra.Text = "";
                 MessageBox.Show("Lütfen Arama Türü Seçiniz.");
                 txtAra.Text = "";
             }
-            else if(cbarmaT.Text=="Emanet No")
+            else if (cbaramaT.Text == "Emanet No")
             {
                 txtAra.Text = "";
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
             }
-            else if (cbarmaT.Text=="Üye Ad")
+            else if (cbaramaT.Text == "Üye Ad")
             {
                 txtAra.Text = "";
                 e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
             }
-            else if(cbarmaT.Text=="Kitap Adı")
+            else if (cbaramaT.Text == "Kitap Adı")
             {
                 txtAra.Text = "";
                 e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
             }
-            
         }
+
+       
     }
 }

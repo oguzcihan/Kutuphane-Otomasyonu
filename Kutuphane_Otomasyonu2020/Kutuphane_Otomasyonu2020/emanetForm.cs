@@ -182,6 +182,12 @@ namespace Kutuphane_Otomasyonu2020
             baglanti.Close();
         }
 
+        private void btnTeslim_Click(object sender, EventArgs e)
+        {
+            Form teslimE = new teslimEdilenForm();
+            teslimE.ShowDialog();
+        }
+
         private void txtKitapId_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);

@@ -78,7 +78,7 @@ namespace Kutuphane_Otomasyonu2020
                     return;
 
                 }
-                Environment.Exit(-1);
+                Environment.Exit(0);
 
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -130,6 +130,12 @@ namespace Kutuphane_Otomasyonu2020
         {
             Form frm = new personelListesi();
             frm.ShowDialog();
+        }
+
+        private void teslimEdildiListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form teslim = new teslimEdilenForm();
+            teslim.ShowDialog();
         }
     }
 }

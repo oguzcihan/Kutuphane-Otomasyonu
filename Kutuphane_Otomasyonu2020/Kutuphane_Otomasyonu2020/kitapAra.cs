@@ -61,7 +61,7 @@ namespace Kutuphane_Otomasyonu2020
             SecilenKitap = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             kitapSecildi?.Invoke();
             this.Hide();
-            
+
         }
 
         private void txtAra_TextChanged(object sender, EventArgs e)
@@ -130,6 +130,44 @@ namespace Kutuphane_Otomasyonu2020
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message.ToString()); }
+
+        }
+        private void txtAra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (comboBox1.Text == "-- Seçiniz --")
+            {
+                txtAra.Text = "";
+                MessageBox.Show("Lütfen Arama Türü Seçiniz.");
+                txtAra.Text = "";
+            }
+            else if (comboBox1.Text == "Kitap No")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Kitap Adı")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Yazar")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Yayınevi")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Baskı Yılı")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
         }
     }
 }

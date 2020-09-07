@@ -112,5 +112,32 @@ namespace Kutuphane_Otomasyonu2020
         {
             birimler();
         }
+        private void txtAra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (comboBox1.Text == "-- Seçiniz --")
+            {
+                txtAra.Text = "";
+                MessageBox.Show("Lütfen Arama Türü Seçiniz.");
+                txtAra.Text = "";
+            }
+            else if (comboBox1.Text == "Üye No")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Üye Adı")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+            else if (comboBox1.Text == "Üye Adresi")
+            {
+                txtAra.Text = "";
+                e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
+                 && !char.IsSeparator(e.KeyChar);
+            }
+
+        }
     }
 }
