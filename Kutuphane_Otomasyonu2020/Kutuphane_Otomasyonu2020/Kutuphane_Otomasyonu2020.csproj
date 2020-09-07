@@ -123,7 +123,7 @@
     <Compile Include="kitapListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="kitapListesi.Designer.cs">
+    <Compile Include="kitapListesi.designer.cs">
       <DependentUpon>kitapListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="KitapSil.cs">
@@ -140,12 +140,6 @@
     </Compile>
     <Compile Include="PersonelKayıt.Designer.cs">
       <DependentUpon>PersonelKayıt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="personelListesi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="personelListesi.Designer.cs">
-      <DependentUpon>personelListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="personelsil.cs" />
     <Compile Include="Program.cs" />
