@@ -16,5 +16,15 @@ namespace Kutuphane_Otomasyonu2020
         {
             InitializeComponent();
         }
+
+        private void yardim_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("www.google.com.tr");
+        }
     }
 }
