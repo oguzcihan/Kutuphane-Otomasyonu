@@ -161,7 +161,7 @@
     <Compile Include="uyeListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="uyeListesi.Designer.cs">
+    <Compile Include="uyeListesi.designer.cs">
       <DependentUpon>uyeListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="uyesil.cs" />
@@ -212,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Uyeekle.resx">
       <DependentUpon>Uyeekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uyeListesi.resx">
+      <DependentUpon>uyeListesi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
