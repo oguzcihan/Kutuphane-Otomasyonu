@@ -118,5 +118,10 @@ namespace Kutuphane_Otomasyonu2020
             Form frm = new kitapListesi();
             frm.ShowDialog();
         }
+
+        private void yardımToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this,"help.chm");
+        }
     }
 }
