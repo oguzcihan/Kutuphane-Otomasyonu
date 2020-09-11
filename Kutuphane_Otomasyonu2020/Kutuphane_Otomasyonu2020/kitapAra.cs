@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyonu2020
 {
-    public partial class kitapAra : Form
+    public partial class kitapAra : Form,IUkitapsec
     {
         SqlConnection baglanti;
         Connect con = new Connect();

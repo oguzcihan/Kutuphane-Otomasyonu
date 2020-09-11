@@ -80,9 +80,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(145, 133);
+            this.button1.Location = new System.Drawing.Point(134, 143);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 31);
+            this.button1.Size = new System.Drawing.Size(102, 31);
             this.button1.TabIndex = 4;
             this.button1.Text = "GİRİŞ";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(-1, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(369, 220);
+            this.groupBox1.Size = new System.Drawing.Size(369, 202);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giriş Yap";
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 221);
+            this.ClientSize = new System.Drawing.Size(367, 202);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

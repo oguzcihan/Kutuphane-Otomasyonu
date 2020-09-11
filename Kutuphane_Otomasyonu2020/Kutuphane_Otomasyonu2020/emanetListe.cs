@@ -152,5 +152,10 @@ namespace Kutuphane_Otomasyonu2020
             }
             
         }
+
+        private void yenileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            liste();
+        }
     }
 }

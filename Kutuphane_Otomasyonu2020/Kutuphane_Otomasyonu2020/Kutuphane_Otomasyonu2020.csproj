@@ -107,6 +107,7 @@
     <Compile Include="GirisClass.cs" />
     <Compile Include="Isimler.cs" />
     <Compile Include="IUkitapsec.cs" />
+    <Compile Include="IUuyesec.cs" />
     <Compile Include="kitapAra.cs">
       <SubType>Form</SubType>
     </Compile>

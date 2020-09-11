@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Kutuphane_Otomasyonu2020
 {
-    public partial class uyeAra : Form
+    public partial class uyeAra : Form,IUuyesec
     {
         SqlConnection baglanti;
         Connect con = new Connect();
@@ -53,7 +53,7 @@ namespace Kutuphane_Otomasyonu2020
 
 
         }
-        public event kitapSecildiHandle uyeSecildi;
+        public event uyeSecildiHandle uyeSecildi;
         public string SecilenUye { get; set; }
 
         private void dataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)

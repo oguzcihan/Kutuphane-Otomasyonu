@@ -137,5 +137,36 @@ namespace Kutuphane_Otomasyonu2020
             Form teslim = new teslimEdilenForm();
             teslim.ShowDialog();
         }
+
+        private void kullanıcıDeğiştirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Anasayfa kapat = new Anasayfa();
+            kapat.Close();
+            Giris frm1 = new Giris();
+            frm1.Show();
+            this.Hide();
+        }
+
+        private void güvenliÇıkışToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void yedekleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void yardımToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form help = new yardim();
+            help.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            emanetListe ac = new emanetListe();
+            ac.ShowDialog();
+        }
     }
 }

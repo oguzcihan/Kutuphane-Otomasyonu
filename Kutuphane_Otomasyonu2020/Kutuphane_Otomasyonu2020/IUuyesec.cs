@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kutuphane_Otomasyonu2020
 {
-    public delegate void kitapSecildiHandle();
-   
-    public interface IUkitapsec
+    public delegate void uyeSecildiHandle();
+    public interface IUuyesec
     {
-        event kitapSecildiHandle kitapSecildi;
+        event uyeSecildiHandle uyeSecildi;
     }
-
-   
 }
