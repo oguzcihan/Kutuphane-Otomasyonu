@@ -9,6 +9,7 @@ namespace Kutuphane_Otomasyonu2020
 {
     class EmanetEkleClass:Emanet
     {
+       
         public int insert(string sorgu, Dictionary<string, string> input)
         {
             var cmd = new SqlCommand

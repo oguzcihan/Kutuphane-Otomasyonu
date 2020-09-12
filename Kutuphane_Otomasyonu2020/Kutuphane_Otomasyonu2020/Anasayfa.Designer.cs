@@ -101,14 +101,14 @@
             // kullanıcıDeğiştirToolStripMenuItem
             // 
             this.kullanıcıDeğiştirToolStripMenuItem.Name = "kullanıcıDeğiştirToolStripMenuItem";
-            this.kullanıcıDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.kullanıcıDeğiştirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kullanıcıDeğiştirToolStripMenuItem.Text = "Kullanıcı Değiştir";
             this.kullanıcıDeğiştirToolStripMenuItem.Click += new System.EventHandler(this.kullanıcıDeğiştirToolStripMenuItem_Click);
             // 
             // güvenliÇıkışToolStripMenuItem
             // 
             this.güvenliÇıkışToolStripMenuItem.Name = "güvenliÇıkışToolStripMenuItem";
-            this.güvenliÇıkışToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.güvenliÇıkışToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.güvenliÇıkışToolStripMenuItem.Text = "Güvenli Çıkış";
             this.güvenliÇıkışToolStripMenuItem.Click += new System.EventHandler(this.güvenliÇıkışToolStripMenuItem_Click);
             // 
@@ -125,21 +125,21 @@
             // ödüçKitapVerToolStripMenuItem
             // 
             this.ödüçKitapVerToolStripMenuItem.Name = "ödüçKitapVerToolStripMenuItem";
-            this.ödüçKitapVerToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.ödüçKitapVerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ödüçKitapVerToolStripMenuItem.Text = "Ödüç Kitap Kayıt";
             this.ödüçKitapVerToolStripMenuItem.Click += new System.EventHandler(this.ödüçKitapVerToolStripMenuItem_Click);
             // 
             // ödünçKitapListesiToolStripMenuItem
             // 
             this.ödünçKitapListesiToolStripMenuItem.Name = "ödünçKitapListesiToolStripMenuItem";
-            this.ödünçKitapListesiToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.ödünçKitapListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ödünçKitapListesiToolStripMenuItem.Text = "Kitap Teslim Al";
             this.ödünçKitapListesiToolStripMenuItem.Click += new System.EventHandler(this.ödünçKitapListesiToolStripMenuItem_Click);
             // 
             // teslimEdildiListesiToolStripMenuItem
             // 
             this.teslimEdildiListesiToolStripMenuItem.Name = "teslimEdildiListesiToolStripMenuItem";
-            this.teslimEdildiListesiToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.teslimEdildiListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.teslimEdildiListesiToolStripMenuItem.Text = "Teslim Edildi Listesi";
             this.teslimEdildiListesiToolStripMenuItem.Click += new System.EventHandler(this.teslimEdildiListesiToolStripMenuItem_Click);
             // 
@@ -156,21 +156,21 @@
             // kitapKayıtToolStripMenuItem
             // 
             this.kitapKayıtToolStripMenuItem.Name = "kitapKayıtToolStripMenuItem";
-            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.kitapKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kitapKayıtToolStripMenuItem.Text = "Kitap Kayıt";
             this.kitapKayıtToolStripMenuItem.Click += new System.EventHandler(this.kitapKayıtToolStripMenuItem_Click);
             // 
             // kitapListesiToolStripMenuItem
             // 
             this.kitapListesiToolStripMenuItem.Name = "kitapListesiToolStripMenuItem";
-            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.kitapListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kitapListesiToolStripMenuItem.Text = "Kitap Listesi";
             this.kitapListesiToolStripMenuItem.Click += new System.EventHandler(this.kitapListesiToolStripMenuItem_Click);
             // 
             // kitapSilToolStripMenuItem
             // 
             this.kitapSilToolStripMenuItem.Name = "kitapSilToolStripMenuItem";
-            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.kitapSilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kitapSilToolStripMenuItem.Text = "Kitap Sil";
             // 
             // toolStripSeparator1
@@ -190,13 +190,13 @@
             // personelKayıtToolStripMenuItem
             // 
             this.personelKayıtToolStripMenuItem.Name = "personelKayıtToolStripMenuItem";
-            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelKayıtToolStripMenuItem.Text = "Personel Kayıt";
             // 
             // personelListesiToolStripMenuItem
             // 
             this.personelListesiToolStripMenuItem.Name = "personelListesiToolStripMenuItem";
-            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personelListesiToolStripMenuItem.Text = "Personel Listesi";
             this.personelListesiToolStripMenuItem.Click += new System.EventHandler(this.personelListesiToolStripMenuItem_Click);
             // 
@@ -212,13 +212,13 @@
             // üyeKayıtToolStripMenuItem
             // 
             this.üyeKayıtToolStripMenuItem.Name = "üyeKayıtToolStripMenuItem";
-            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.üyeKayıtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.üyeKayıtToolStripMenuItem.Text = "Üye Kayıt";
             // 
             // üyeListesiToolStripMenuItem
             // 
             this.üyeListesiToolStripMenuItem.Name = "üyeListesiToolStripMenuItem";
-            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.üyeListesiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.üyeListesiToolStripMenuItem.Text = "Üye Listesi";
             this.üyeListesiToolStripMenuItem.Click += new System.EventHandler(this.üyeListesiToolStripMenuItem_Click);
             // 
@@ -239,14 +239,14 @@
             // yedekleToolStripMenuItem
             // 
             this.yedekleToolStripMenuItem.Name = "yedekleToolStripMenuItem";
-            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.yedekleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.yedekleToolStripMenuItem.Text = "Yedekle";
             this.yedekleToolStripMenuItem.Click += new System.EventHandler(this.yedekleToolStripMenuItem_Click);
             // 
             // yardımToolStripMenuItem1
             // 
             this.yardımToolStripMenuItem1.Name = "yardımToolStripMenuItem1";
-            this.yardımToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.yardımToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.yardımToolStripMenuItem1.Text = "Yardım";
             this.yardımToolStripMenuItem1.Click += new System.EventHandler(this.yardımToolStripMenuItem1_Click);
             // 
@@ -286,7 +286,7 @@
             this.btnperKayit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnperKayit.Image = ((System.Drawing.Image)(resources.GetObject("btnperKayit.Image")));
             this.btnperKayit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnperKayit.Location = new System.Drawing.Point(471, 75);
+            this.btnperKayit.Location = new System.Drawing.Point(627, 76);
             this.btnperKayit.Name = "btnperKayit";
             this.btnperKayit.Size = new System.Drawing.Size(143, 57);
             this.btnperKayit.TabIndex = 177;
@@ -301,7 +301,7 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(636, 76);
+            this.button5.Location = new System.Drawing.Point(482, 76);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(122, 56);
             this.button5.TabIndex = 178;
