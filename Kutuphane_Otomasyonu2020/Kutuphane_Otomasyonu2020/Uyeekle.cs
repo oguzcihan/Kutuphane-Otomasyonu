@@ -130,10 +130,11 @@ namespace Kutuphane_Otomasyonu2020
             foreach (DataGridViewRow drow in dataGridView1.SelectedRows)  //Seçili Satırları Silme
             {
                 int no = Convert.ToInt32(drow.Cells[0].Value);
-
+                string ad = Convert.ToString(drow.Cells[1].Value);
                 uyesil sil = new uyesil();
-                sil.delete(no);
+                sil.delete(no,ad);
 
+    
             }
 
             personelsil silTablo = new personelsil();
@@ -175,6 +176,23 @@ namespace Kutuphane_Otomasyonu2020
 
             }
             catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow drow in dataGridView1.SelectedRows)  //Seçili Satırları Silme
+            {
+                int no = Convert.ToInt32(drow.Cells[0].Value);
+                string ad = Convert.ToString(drow.Cells[1].Value);
+
+                Uyesil adsil = new Uyesil();
+                adsil.delete(no, ad);
+
+            }
+
+            personelsil silTablo = new personelsil();
+            silTablo.DataGridDoldur(dataGridView1, "SELECT uyeNo, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres FROM Uyeler", "Uyeler");
 
         }
     }

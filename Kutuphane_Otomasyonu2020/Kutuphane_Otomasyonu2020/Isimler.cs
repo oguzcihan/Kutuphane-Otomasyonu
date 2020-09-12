@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kutuphane_Otomasyonu2020
 {
-    public class Isimler
+    public  class Isimler
     {
 
         public string kitapId = "Kitap No";
