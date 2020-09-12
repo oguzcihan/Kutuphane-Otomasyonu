@@ -27,7 +27,7 @@ namespace Kutuphane_Otomasyonu2020
             dataGrid.DataSource = dt.DefaultView;
         }
 
-        public void delete(int no)
+        public virtual void delete(int no,string ad)
         {
             try
             {
@@ -40,6 +40,31 @@ namespace Kutuphane_Otomasyonu2020
                     baglanti.Open();
                     SqlCommand ole = new SqlCommand("delete from Uyeler where uyeNo=@no", baglanti);
                     ole.Parameters.AddWithValue("@no", no);
+                    ole.ExecuteNonQuery();
+                    ole.Dispose();
+                    baglanti.Close();
+
+                }
+
+            }
+            catch (Exception hata) { MessageBox.Show(hata.Message.ToString(), "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+        }
+    }
+    class Uyesil:uyesil
+    {
+        public override void delete(int no,string ad)
+        {
+            try
+            {
+
+                DialogResult d;
+                d = MessageBox.Show("Silmek istiyor musunuz?", "Onay", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (d == DialogResult.Yes)
+                {
+                    baglanti = new SqlConnection(con.adres);
+                    baglanti.Open();
+                    SqlCommand ole = new SqlCommand("delete from Uyeler where uyeAdi=@uyead", baglanti);
+                    ole.Parameters.AddWithValue("@uyead", ad);
                     ole.ExecuteNonQuery();
                     ole.Dispose();
                     baglanti.Close();

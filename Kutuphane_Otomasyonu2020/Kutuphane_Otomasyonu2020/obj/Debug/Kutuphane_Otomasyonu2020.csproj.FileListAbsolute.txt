@@ -50,3 +50,28 @@ C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\K
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.pdb
 C:\Users\lenovo\Documents\GitHub\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.teslimEdilenForm.resources
 D:\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.teslimEdilenForm.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.csprojResolveAssemblyReference.cache
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Anasayfa.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetForm.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListe.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetListeDetay.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.emanetSil.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Giris.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapAra.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapKayit.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.kitapListesi.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.KitapSil.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.PersonelKayıt.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.personelListesi.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Properties.Resources.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.teslimEdilenForm.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.uyeAra.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.Uyeekle.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.uyeListesi.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.yardim.resources
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.csproj.GenerateResource.Cache
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.exe
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\obj\Debug\Kutuphane_Otomasyonu2020.pdb
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\bin\Debug\Kutuphane_Otomasyonu2020.exe.config
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\bin\Debug\Kutuphane_Otomasyonu2020.exe
+C:\Users\game\Desktop\Yeni klasör (2)\Kutuphane-Otomasyonu\Kutuphane_Otomasyonu2020\Kutuphane_Otomasyonu2020\bin\Debug\Kutuphane_Otomasyonu2020.pdb

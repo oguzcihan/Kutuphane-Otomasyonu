@@ -30,10 +30,12 @@ namespace Kutuphane_Otomasyonu2020
 
             if (lblgorev.Text == "PERSONEL")
             {
-                üyeİşlemleriToolStripMenuItem.Visible = false;
+               
+                personelİşlemleriToolStripMenuItem.Visible = false;
                 kitapSilToolStripMenuItem.Visible = false;
                 yedekleToolStripMenuItem.Visible = false;
                 btnperKayit.Visible = false;
+                
             }
         }
 
@@ -154,7 +156,22 @@ namespace Kutuphane_Otomasyonu2020
 
         private void yedekleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "(*.BAK) | *.BAK|(*.rar)|*.rar";
+                save.FilterIndex = 0;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    string sql = string.Format(@"BACKUP database Kutuphane to disk='{0}'", save.FileName);
+                    SqlCommand cmd = new SqlCommand(sql, baglanti);
+                    baglanti.Open();
+                    cmd.ExecuteNonQuery();
+                    baglanti.Close();
+                    MessageBox.Show("Yedeklendi", "Sistem Mesajı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
         }
 
         private void yardımToolStripMenuItem1_Click(object sender, EventArgs e)

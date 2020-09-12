@@ -24,8 +24,13 @@ namespace Kutuphane_Otomasyonu2020
         {
             baglanti = new SqlConnection(con.adres);
             InitializeComponent();
+<<<<<<< HEAD
             Emanet emanet = new EmanetEkleClass();
+=======
+            Emanet emanet = new EmanetEkleClass(); //polymorphism
+>>>>>>> refs/remotes/origin/master
             emanet.DataGridDoldur(dgvTablo, "SELECT emanetId, uyeAdi, uyeSoyad, uyeTel, uyePosta, uyeAdres, kitapAdi, yazar, yayınEvi, emanetTarihi, gerialınacakTarih FROM OduncKitap INNER JOIN Uyeler ON OduncKitap.uyeNo = Uyeler.uyeNo INNER JOIN Kitaplar ON OduncKitap.kitapId = Kitaplar.kitapId", "OduncKitap");
+           
         }
 
         private void emanetForm_Load(object sender, EventArgs e)
