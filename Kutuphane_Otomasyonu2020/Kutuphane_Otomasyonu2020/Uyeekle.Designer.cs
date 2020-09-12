@@ -49,6 +49,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -177,10 +178,18 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // button4
+            // 
+            resources.ApplyResources(this.button4, "button4");
+            this.button4.Name = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Uyeekle
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox7);
@@ -223,5 +232,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button4;
     }
 }
